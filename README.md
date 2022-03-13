@@ -1,8 +1,7 @@
 ---
 
 * 💨[Game_site](https://mingnana.github.io/Portfolio_GAME-SITE/index.html) 
-
-
+---
 📆 프로젝트 기간
 * 2022.02.05
 
