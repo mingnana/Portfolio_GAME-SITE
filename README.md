@@ -1,6 +1,6 @@
 ***
 
-* 💨[Game_site](https://mingnana.github.io/Portfolio_GAME-SITE/index.html) 
+[Game_site](https://mingnana.github.io/Portfolio_GAME-SITE/index.html) 
 
 ***
 
