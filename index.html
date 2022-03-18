@@ -12,21 +12,19 @@
 </head>
 <body>
    <div id="wrap">
-      <div id="header">
+      <header id="header">
          <div id="header_inn">
             <h1>
                <a href="https://www.ea.com/" title="메인"> 
-                  <img src="img/index/ea_logo.svg" alt="로고">
+                  <img src="img/index/ea_logo.svg" alt="로고"/>
                </a>
             </h1>
-            <div id="gnb">
+            <nav id="gnb">
                <ul>
                   <li class="gnb_game">
                      <a href="#" title="Games">Games</a>
                      <ul>
-                        <li class="title">
-                           <a href="#" title="BROWSE GAMES">BROWSE GAMES</a>
-                        </li>
+                        <li class="title"><a href="#" title="Games">Games</a></li>
                         <li><a href="#" title="Latest Games">Latest Games</a></li>
                         <li><a href="#" title="Coming Soon">Coming Soon</a></li>
                         <li><a href="#" title="EA SPORTS">EA SPORTS</a></li>
@@ -37,6 +35,7 @@
                   <li class="gnb_more">
                      <a href="#" title="More Experiences">More Experiences</a>
                      <ul>
+                        <li class="title"><a href="#" title="More Experiences">More Experiences</a></li>
                         <li><a href="#" title="EA Play">EA Play</a></li>
                         <li><a href="#" title="Origin">Origin</a></li>
                         <li><a href="#" title="Competitive Gaming">Competitive Gaming</a></li>
@@ -46,6 +45,7 @@
                   <li class="gnb_about">
                      <a href="#" title="About">About</a>
                      <ul>
+                        <li class="title"><a href="#" title="About">About</a></li>
                         <li><a href="#" title="Company">Company</a></li>
                         <li><a href="#" title="EA Studios">EA Studios</a></li>
                         <li><a href="#" title="Our Technology">Our Technology</a></li>
@@ -57,6 +57,7 @@
                   <li class="gnb_commit">
                      <a href="#" title="Commitments">Commitments</a>
                      <ul>
+                        <li class="title"><a href="#" title="Commitments">Commitments</a></li>
                         <li><a href="#" title="Positive Play">Positive Play</a></li>
                         <li><a href="#" title="Inclusion &amp; Diversity">Inclusion &amp; Diversity</a></li>
                         <li><a href="#" title="Community Investment">Community Investment</a></li>
@@ -64,30 +65,32 @@
                         <li><a href="#" title="Environment">Environment</a></li>
                      </ul>
                   </li>
-                  <!-- <li class="gnb_reso">
-                     <a href="#" title="Resources">Resources</a>
-                     <ul>
-                        <li><a href="#" title="Help">Help</a></li>
-                        <li><a href="#" title="Forums">Forums</a></li>
-                        <li><a href="#" title="Careers">Careers</a></li>
-                        <li><a href="#" title="Parental Controls">Parental Controls</a></li>
-                        <li><a href="#" title="Accessibility">Accessibility</a></li>
-                        <li><a href="#" title="Press">Press</a></li>
-                        <li><a href="#" title="Investors">Investors</a></li>
-                     </ul>
-                  </li> -->
                </ul>
-            </div>
+            </nav>
             <div id="header_btn">
-               <p></p>
+               <div class="lang">
+                  <p class="img">
+                     <a href="#" title="언어">
+                        <img src="img/index/header_language.svg" alt="언어설정">
+                     </a>
+                  </p>
+                  <p class="text">
+                     <a href="#" title="언어변경">ENG</a>
+                  </p>
+               </div>
+               <div class="menu_bar">
+                  <p></p>
+                  <p></p>
+                  <p></p>
+               </div>
             </div>
          </div>
-      </div>
+      </header>
       <div id="container">
          <div id="visual">
             <ul>
                <li>
-                  <img src="img/index/visual0.png" alt="메인이미지" />
+                  <img src="img/index/background.gif" alt="메인이미지" />
                </li>
             </ul>
          </div>
@@ -114,32 +117,62 @@
                <ul>
                   <li class="no1">
                      <a href="./mass.html" title="mass">
-                        <img src="img/index/fea1.jpg" alt="mass"/>
+                        <span>
+                           <img src="img/index/fea1.jpg" alt="mass"/>
+                        </span>
+                        <span class="logo">
+                           <img src="img/index/fea1_logo.svg" alt="mass_logo">
+                        </span>
                      </a>
                   </li>
                   <li class="no2">
-                     <a href="./lost in Random.html" title="lost in Landom">
-                        <img src="img/index/fea2.jpg" alt="lost in Landom"/>
+                     <a href="./lost_in_Random.html" title="lost in Random">
+                        <span>
+                           <img src="img/index/fea2.jpg" alt="lost in Random"/>
+                        </span>
+                        <span class="logo">
+                           <img src="img/index/fea2_logo.png" alt="lost_logo"/>
+                        </span>
                      </a>
                   </li>
                   <li class="no3">
                      <a href="./nhl.html" title="nhl22">
-                        <img src="img/index/fea3.jpg" alt="nhl22"/>
+                        <span>
+                           <img src="img/index/fea3.jpg" alt="nhl22"/>
+                        </span>
+                        <span class="logo">
+                           <img src="img/index/fea3_logo.png" alt="nhl_logo"/>
+                        </span>
                      </a>
                   </li>
                   <li class="no4">
-                     <a href="#" title="battlefield">
-                        <img src="img/index/fea4.jpg" alt="battlefield" />
+                     <a href="./it_takes_two.html" title="it takes two">
+                        <span>
+                           <img src="img/index/fea4.jpg" alt="it takes two"/>
+                        </span>
+                        <span class="logo">
+                           <img src="img/index/fea4_logo.png" alt="battledfield_logo"/>
+                        </span>
                      </a>
                   </li>
                   <li class="no5">
                      <a href="#" title="fifa">
-                        <img src="img/index/fea5.jpg" alt="fifa22" />
+                        <span>
+                           <img src="img/index/fea5.jpg" alt="fifa22" />
+                        </span>
+                        <span class="logo">
+                           <img src="img/index/fea5_logo.svg" alt="fifa_logo"/>
+                        </span>
                      </a>
                   </li>
                   <li class="no6">
-                     <a href="#" title="it takes two">
-                        <img src="img/index/fea6.jpg" alt="it takes two"/>
+                     <a href="#" title="battlefield">
+                        <span>
+                           <img src="img/index/fea6.jpg" alt="battlefield"/>
+                        </span>
+                        <span class="logo">
+                           <img src="img/index/fea6_logo.svg" alt="battlefield_logo"/>
+                        </span>
                      </a>
                   </li>
                </ul>
@@ -351,7 +384,7 @@
          <div id="EA">
             <div>
                <h3>
-                 <img src="img/index/ea_logo_play.svg" alt="EA">
+                 <img src="img/index/ea_logo_play.svg" alt="EA"/>
                </h3>
                <p class="desc">
                   Don’t just get the game. Get more from your game.
@@ -364,49 +397,96 @@
             </div>
          </div>
       </div>
-      <div id="footer">
+      <footer id="footer">
+         <!-- <div id="footer_info">
+         </div> -->
          <div id="footer_inn">
-            <div class="top_menu">
-               <p class="logo">
-                  <img src="img/index/ea_logo_icon.png" alt="로고">
-               </p>
-               <div class="gnb">
-                  <ul>
-                     <li><a href="#" title="Game Library">Game Library</a></li>
-                     <li><a href="#" title="Subscribe">Subscribe</a></li>
-                     <li><a href="#" title="Redeem Code">Redeem Code</a></li>
-                     <li><a href="#" title="Origin">Origin</a></li>
-                     <li><a href="#" title="About">About</a></li>
-                     <li><a href="#" title="Accessibility">Accessibility</a></li>
-                     <li><a href="#" title="Help">Help</a></li>
-                  </ul>
-               </div>
-               <p class="select">
-                  <select>
-                     <option value="United States">United States</option>
-                     <option value="Argentina">Argentina</option>
-                     <option value="Australia">Australia</option>
-                     <option value="Austria">Austria</option>
-                     <option value="Belgium">Belgium</option>
-                     <option value="Brazil">Brazil</option>
-                     <option value="Canada">Canada</option>
-                  </select>
-               </p>
-            </div>
-            <div id="footer_info">
+            <div class="gnb">
                <ul>
-                  <li><a href="#" title="Legal">Legal</a></li>
-                  <li><a href="#" title="User Agreement">User Agreement</a></li>
-                  <li><a href="#" title="Privacy &amp; Cookie Policy (Your Privacy Rights)">Privacy &amp; Cookie Policy (Your Privacy Rights)</a></li><br/>
-                  <li><a href="#" title="Online Service Updates">Online Service Updates</a></li>
-                  <li><a href="#" title="Security">Security</a></li>
-                  <li><a href="#" title="YouTube Terms of Service">YouTube Terms of Service</a></li><br/>
-                  <li><a href="#" title="Google Privacy Policy">Google Privacy Policy</a></li><br/>
-                  <li><a href="#" title="© 2022 Electronic Arts Inc.">© 2022 Electronic Arts Inc.</a></li>
+                  <li><a href="#" title="Game Library">Game Library</a></li>
+                  <li><a href="#" title="Subscribe">Subscribe</a></li>
+                  <li><a href="#" title="Redeem Code">Redeem Code</a></li>
+                  <li><a href="#" title="Origin">Origin</a></li>
+                  <li><a href="#" title="About">About</a></li>
+                  <li><a href="#" title="Accessibility">Accessibility</a></li>
+                  <li><a href="#" title="Help">Help</a></li>
                </ul>
             </div>
+            <div class="footer_bottom">
+               <p class="logo">
+                  <img src="img/index/ea_logo_icon.png" alt="ea 로고">
+               </p>
+               <div class="infoArea">
+                  <ul>
+                     <li><a href="#" title="Legal">Legal</a></li>
+                     <li><a href="#" title="User Agreement">User Agreement</a></li>
+                     <li><a href="#" title="Privacy &amp; Cookie Policy (Your Privacy Rights">Privacy &amp; Cookie Policy (Your Privacy Rights)</a></li>
+                     <li><a href="#" title="Online Service Updates">Online Service Updates</a></li>
+                     <li><a href="#" title="Security">Security</a></li>
+                     <li><a href="#" title="YouTube Terms of Service">YouTube Terms of Service</a></li>
+                  </ul>
+                  <p class="policy">
+                     <a href="#" title="Google Privacy Policy">Google Privacy Policy</a>
+                  </p>
+                  <p class="copy">
+                     <a href="#" title="© 2022 Electronic Arts Inc.">&copy; 2022 Electronic Arts Inc.</a>
+                  </p>
+               </div>
+               <div class="siteArea">
+                  <div class="select">
+                     <select>
+                        <option value="Family Site">Family Site</option>
+                        <option value="Argentina">Argentina</option>
+                        <option value="Australia">Australia</option>
+                        <option value="Austria">Austria</option>
+                        <option value="Belgium">Belgium</option>
+                        <option value="Brazil">Brazil</option>
+                        <option value="Canada">Canada</option>
+                     </select>
+                  </div>
+                  <div class="sns">
+                     <ul>
+                        <li>
+                           <a href="#" title="페이스북">
+                              <img src="img/index/sns_fb.svg" alt="페이스북"/>
+                           </a>
+                        </li>
+                        <li>
+                           <a href="#" title="링크드인">
+                              <img src="img/index/sns_in.svg" alt="링크드인"/>
+                           </a>
+                        </li>
+                        <li>
+                           <a href="#" title="인스타">
+                              <img src="img/index/sns_ins.svg" alt="인스타"/>
+                           </a>
+                        </li>
+                        <li>
+                           <a href="#" title="유튜브">
+                              <img src="img/index/sns_yt.svg" alt="유튜브"/>
+                           </a>
+                        </li>
+                        <li>
+                           <a href="#" title="트위터">
+                              <img src="img/index/sns_tw.svg" alt="트위터"/>
+                           </a>
+                        </li>
+                     </ul>
+                  </div>
+               </div>
+               <div class="info">
+                  <ul>
+                     <li><a href="#" title="Impact Report">Impact Report</a></li>
+                     <li><a href="#" title="Executives">Executives</a></li>
+                     <li><a href="#" title="Privacy & Security">Privacy & Security</a></li>
+                     <li><a href="#" title="Political Activities">Political Activities</a></li>
+                     <li><a href="#" title="Global Human Rights Statement">Global Human Rights Statement</a></li>
+                     <li><a href="#" title="Partner With Us">Partner With Us</a></li>
+                  </ul>
+               </div>
+            </div>
          </div>
-      </div>
+      </footer>
    </div>
 </body>
 </html>
