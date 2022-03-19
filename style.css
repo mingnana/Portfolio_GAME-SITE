@@ -213,7 +213,7 @@
       #footer_inn .logo img{width:100%;}
 
       /* infoArea */
-      #footer_inn .infoArea{width:500px; margin-left:20px; float:left;}
+      #footer_inn .infoArea{width:500px; margin-left:20px; float:left; }
       #footer_inn .infoArea:after{content:""; display:block; clear:both;}
 
       #footer_inn .infoArea ul{width:100%; height:100%;}
