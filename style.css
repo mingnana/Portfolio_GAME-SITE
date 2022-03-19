@@ -1,46 +1,54 @@
-      *{margin:0; padding:0;}
+     *{margin:0; padding:0;}
       li{list-style:none;}
       a:link, a:visited{text-decoration:none; color:#fff;}
-      a:hover, a:focus{color:#f00;}
 
       body{font-family:궁서}
       #wrap{min-width:1025px; width:100%;}
+   
 
       /* ################################# header ################################# */
       #header{width:100%; height:92px; position:absolute; font-family: sans-serif;}
-      #header a{color:#000;}
 
       #header_inn{width:1800px; height:42px; padding:20px 0 20px; margin:0 auto; }
       /* 로고 */
-      h1{width:10%; height:100%; margin:20px 5% 0 5%; float:left;}
+      h1{width:10%; height:100%; margin:20px 6% 0 5%; float:left;}
       h1 a{width:100%; height:100%;}
       h1 img{width:100%; height:100%; }
       /* 메뉴 */
-      #gnb{width:63%; height:62px; float:left;}
-      #gnb ul{width:1383px; height:100%; font-size:18px;}
-      #gnb li{width:230px; margin-left:30px; height:40px; line-height:40px; padding-top:20px;
+      #gnb{width:59%; float:left; padding-top:20px; position:relative;}
+      #gnb ul{width:1383px; height:100%; font-size:18px; }
+      #gnb li{width:230px; margin-left:20px; line-height:40px;
          text-align:center; font-weight:700; float:left;}
-      #gnb li ul{width:230px; height:360px; }
-      #gnb li ul li{width:100%; margin-left:0; padding:10px 0;}
-      /* #gnb a{width:100%; height:41px;} */
-
-      /* 두번째 메뉴 */
-      #gnb .gnb_more{width:250px;}
-      #gnb .gnb_more ul{width:250px; height:240px;}
-
-      /* 네번째 메뉴 */
-      #gnb .gnb_commit{width:280px;}
-      #gnb .gnb_commit ul{width:280px; height:300px;}
+      #gnb li ul{width:230px; height:0px; overflow:hidden; opacity:0;
+         transition:all 0.4s linear; 
+         background-color:#fff; border-radius: 30px 30px 30px 30px;
+         position:absolute; top:0;}
+      #gnb .title{padding:20px 0;}
+      #gnb li ul li{width:100%; margin-left:0; padding-bottom:10px;}
+    
 
       /* 메뉴 기능 */
-      #gnb li ul{display:none;}
-      #gnb li:hover{background-color:#fff;}
-      #gnb li:hover ul{display:block;}
-      #gnb li:hover li{background-color:#fff;}
+      #gnb li:hover ul{opacity:1;}
+      #gnb li:hover a{color:#000;}
+      #gnb ul li li a:hover{color:#f00;}
+      #gnb ul li:first-child a:hover{color:#000;}
+
+      #gnb .gnb_game:hover ul{height:330px;}
+      #gnb .gnb_more:hover ul{height:280px;}
+      #gnb .gnb_about:hover ul{height:380px;}
+      #gnb .gnb_commit:hover ul{height:330px;}
       
-      /* 버튼 */
-      #header_btn{width:3%; margin-left: 13%;float:left;}
-      #header_btn p{width:50px; height:5px; margin:20px 1% 20px 0; background:#000;}
+
+      /* header_btn / lang */
+      #header_btn{width:10%; padding-top:16px; margin-left:10%; float:left;}
+      #header_btn .lang{width:40%; float:left; text-align:center;}
+      #header_btn .lang .img{width:50%; float:left;}
+      #header_btn .lang img{width:100%;}
+      #header_btn .lang .text{width:50%; line-height:45px; float:left; font-weight:700;}
+
+      /* header_btn / menu_bar*/
+      #header_btn .menu_bar{width:20%; margin-left:20%; margin-top:10px; float:left;}
+      #header_btn .menu_bar p{width:35px; height:3px; background:#fff; margin-top:5px; }
 
       /* ################################# conatiner 공통작업 ################################# */
       #container{width:100%;}
@@ -49,12 +57,16 @@
          font-weight:900;}
       /* 박스*/
       .box{width:170px; height:50px; line-height:50px; text-align:center;
-         border:1px solid #f3f3f3; border-radius:3px; font-size:16px;}
+         border:1px solid #f3f3f3; border-radius:3px; font-size:16px; transform:scale(1);}
+      .box:hover{transform:scale(1.1);}
 
       /* ################################# visual ################################# */
-      #visual {width:100%; height:1000px; text-align:center; overflow:hidden;}
-      #visual p{width:472px; height:960px; line-height:960px; margin-left:300px;}
-      #visual p img{width:100%;}
+      #visual {width:100%; height:1000px; text-align:center;}
+      #visual ul{width:100%;}
+      #visual li{width:100%;}
+      #visual img{width:100%;}
+      #visual:after{content:"";  display:block; clear:both;}
+
 
       /* #################################  txt  ################################# */
 
@@ -64,20 +76,30 @@
       #txt .text {font-size:18px; text-align:center;}
       #txt .txt_inner ul{width:1200px; height:420px;  margin:0 auto;}
       #txt .txt_inner li {width:600px; text-align:center; float:left;}
-      #txt .txt_inner li .label{padding:70px 30px 10px; font-size:30px; /* background: gold; */}
-      #txt .txt_inner li .number{font-size:60px; /* background: blue; */}
+      #txt .txt_inner li .label{padding:70px 30px 10px; font-size:30px; }
+      #txt .txt_inner li .number{font-size:60px; }
 
       /* #################################  Featured  ################################# */
       #featured {width:100%; height:954px; background-color:#201e1f; color:#fff;}
       #featured .featured_inner{width:1030px; height:690px; overflow:hidden; margin:0 auto;}
       #featured .featured_inner ul{width:100%; height:100%;}
-      #featured .featured_inner li{width:290px; height:290px; margin:40px 0 0 40px;  float:left;}
+      #featured .featured_inner li{width:290px; height:290px; margin:40px 0 0 40px; 
+         position:relative; float:left; }
+      #featured .featured_inner .logo{width:140px; position:absolute; left:75px;}
       #featured .featured_inner a{width:100%; display:block;}
       #featured .featured_inner span{width:100%; display:block;}
       #featured .featured_inner img{width:100%;}
-
+      /* 각 li 로고 위치 */
+      #featured .no1 .logo{top:113px;}
+      #featured .no2 .logo{top:112px;}
+      #featured .no3 .logo{top:131px;}
+      #featured .no4 .logo{top:96px;}
+      #featured .no5 .logo{top:106px;}
+      #featured .no6 .logo{top:125px;}
+      /* 더보기 박스 */
       #featured .box{margin:0 auto;}
       #featured .box a{width:100%; display:block;}
+
 
       /* #################################  sale  ################################# */
       #sale{width:100%; height:1004px; background-color:#f7f7f7;}
@@ -139,9 +161,10 @@
 
       /* 위_메뉴 */
       #update .menu{width:100%; height:30px; padding:30px 0;}
-      #update .menu ul{width:900px; height:100%; font-weight:700; text-align:center;  margin:0 auto ;}
+      #update .menu ul{width:900px; height:100%; font-weight:700; text-align:center; margin:0 auto ;}
       #update .menu li{padding:0 15px; margin-right:5px; line-height:30px;
          border-right:1px solid #ccc; float:left;}
+      #update .menu li a:hover{color:#f00;}
       #update .menu a{width:100%; height:100%; color:#333;}
 
       /* 아래_게임 */
@@ -164,28 +187,53 @@
       #EA .box a{width:100%; display:block;}
       #EA:after{content:""; display:block; clear:both;}
 
+
       /* ################################# footer ################################# */
-      #footer{width:100%; padding:30px; font-family: sans-serif; background-color:#ccc;}
+      #footer{width:100%; font-family: sans-serif;  background-color:#f5f5f5;}
       #footer:after{content:""; display:block; clear:both;}
-      #footer_inn{width:1150px; margin:0 auto;}
-      /* 상단메뉴 */
-      #footer_inn .top_menu{width:100%; padding-bottom:10px;}
-      #footer_inn .top_menu:after{content:""; display:block; clear:both;}
+      #footer a{color:#777;}
 
-      /* 상단메뉴_로고 */
-      #footer_inn .logo{width:64px; float:left;}
-      #footer_inn .logo img{width:100%;}
-      /* 상단메뉴_gnb */
-      #footer_inn .gnb{width:950px; height:64px; line-height:64px; float:left;}
+      /* footer_info / info */
+      #footer_info{width:100%; padding:30px 0;}
+      #footer_info:after{content:""; display:block; clear:both;}
+      #footer_info .info{width:1150px; margin:0 auto;}
+
+      /* footer_inn / gnb */
+      #footer_inn{width:1150px; padding:30px 0;  margin:0 auto;}
+      #footer_inn .gnb{width:100%; padding-bottom:30px; border-bottom: 1px solid #aaa;}
       #footer_inn .gnb ul{width:100%; height:100%;}
-      #footer_inn .gnb li{display:inline; margin:0 20px; text-align:center; float:left;}
-      /* 상단메뉴_언어 */
-      #footer_inn .select{width:136px; height:64px;background:orange; float:left;}
-      #footer_inn select{width:100%; height:100%; color:#555; border:1px solid #ccc; }
+      #footer_inn .gnb li{display:inline; margin:0 20px; text-align:center;}
+      
+      /* bottom */
+      #footer_inn .footer_bottom{width:100%; padding-top:30px;}
+      #footer_inn .footer_bottom:after{content:""; display:block; clear:both;}
 
-      /* 하단메뉴_info */
-      #footer_info{width:1070px; padding-left:80px; padding-top:20px;}
-      #footer_info ul{width:600px;}
-      #footer_info li{display:inline; margin-right:20px; line-height:25px; text-align:center; font-size:14px;}
-      #footer p{font-size:14px; line-height:25px;}
-      #footer_inn a{color:#000;}
+      /* logo */
+      #footer_inn .logo{width:64px; height:64px; float:left;}
+      #footer_inn .logo img{width:100%;}
+
+      /* infoArea */
+      #footer_inn .infoArea{width:500px; margin-left:20px; float:left;}
+      #footer_inn .infoArea:after{content:""; display:block; clear:both;}
+
+      #footer_inn .infoArea ul{width:100%; height:100%;}
+      #footer_inn .infoArea li{display:inline; margin-right:20px; line-height:25px; text-align:center; font-size:14px;}
+      #footer_inn .infoArea p{font-size:14px; line-height:25px;}
+
+      /* siteArea */
+      #footer_inn .siteArea{width:176px; margin-left:390px; float:left;}
+      #footer_inn .siteArea:after{content:""; display:block; clear:both;}
+      #footer_inn .siteArea .select{width:100%; height:44px;}
+      #footer_inn .siteArea select{width:100%; height:100%; text-indent:10px; color:#555; border:1px solid #aaa;}
+      #footer_inn .siteArea .sns{width:100%; padding-top:10px;}
+      #footer_inn .siteArea .sns ul{width:100%;}
+      #footer_inn .siteArea .sns li{width:24px; margin-left:10px; float:left;}
+      #footer_inn .siteArea .sns li a{width:100%;}
+
+      /* info */
+      #footer_inn .info{width:1064px; padding-left:84px; padding-top:30px; float:left;}
+      #footer_inn .info ul{width:100%;}
+      #footer_inn .info li{display:inline; margin-right:20px; line-height:25px; text-align:center; font-size:14px;}
+      #footer_inn .info li a{color:#444;}
+      /* 기능 */
+      #footer a:hover{color:rgb(228, 177, 77);} 
