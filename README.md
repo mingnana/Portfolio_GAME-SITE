@@ -1,12 +1,17 @@
-##2022.03.05
-git init
-merge 완료
+***
 
-# link👾
+[Game_site](https://mingnana.github.io/Portfolio_GAME-SITE/index.html) 
 
-💨[game-site](https://mingnana.github.io/Portfolio_GAME-SITE/) :
+***
 
-: HTML,CSS,JS를 통해 구현 / 캔버스에 마우스로 그림그리기, fill·save 기능구현
+📆 프로젝트 기간
+* 2022.02.05
 
+⚙ 사용언어
+* HTML,CSS,Javascrip 
 
-https://github.com/Hoon-Hub/Vue#220208
+🛠 구현 기능
+* 색깔 지정 후 캔버스에 그림 그리기 기능
+* 색깔 지정 후 캔버스에 채우기 기능
+* 브러쉬 크기 조절 기능
+* 그림 저장 기능
