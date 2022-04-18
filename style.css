@@ -1,9 +1,31 @@
 @import "style.css";
 
 
+*{margin:0; padding:0;}
+li{list-style:none;}
 a:link, a:visited{text-decoration:none; color:#fff;}
+
 body{font-family: 'Playfair Display', serif;}
 #wrap{min-width:1025px; width:100%;}
+#text_inn {
+   margin: auto;
+   width: 100vw;
+   top: 0;
+   bottom: 0;
+}
+
+#text1, #text2 {
+
+   position: absolute;
+   width: 100%;
+   display: inline-block;
+   
+   font-size: 80pt;
+   
+   text-align: center;
+   
+   user-select: none;
+}
 
 /* ################################# header ################################# */
 #header{width:100%; height:92px; position:absolute; z-index:1; font-family: 'Ramaraja', serif;}
@@ -67,6 +89,7 @@ h1 img{width:100%; height:100%; }
 #visual source{width:100%;}
 #visual:after{content:"";  display:block; clear:both;}
 
+
 /* #################################  txt  ################################# */
 
 #txt {width:100%; height:954px; background-color:#f5f5f5;}
@@ -97,6 +120,7 @@ h1 img{width:100%; height:100%; }
 #featured .featured_inner .text:after{content:"offical site"; display:block; text-align:center; line-height:350px;
    transform:translatey(-50px); opacity:0; transition:transform 0.3s linear, opacity 0.3s linear;  }
 
+
 /* 각 li 사진 */
 #featured .no1{background-image:url("img/index/fea1.jpg");}
 #featured .no2{background-image:url("img/index/fea2.jpg");}
@@ -118,9 +142,11 @@ h1 img{width:100%; height:100%; }
    background-image:linear-gradient(to right, rgb(21, 0, 179,0.8), rgb(255, 71, 71,0.8));}
 #featured li .text:hover:after{transform:translatey(5px); opacity:1;}
 
+
 /* 더보기 박스 */
 #featured .box{margin:0 auto;}
 #featured .box a{width:100%; display:block;}
+
 
 /* #################################  sale  ################################# */
 #sale{width:100%; height:1004px; background-color:#f7f7f7;}
@@ -153,6 +179,7 @@ line-height:40px;}
 #middle_box .desc span{line-height:40px; font-size: 16px; color:#ccc;  font-weight:400;}
 #middle_box a{color: #fff; font-weight:700;}
 
+
 /* ################################# recomended ################################# */
 #recomended{width:100%; height:954px; background-color:#f5f5f5}
 #recomended .reco_inn{width:1460px; height:688px; 
@@ -184,6 +211,7 @@ line-height:40px;}
 #recomended .box{margin:0 auto; background-color:#201e9a;}
 #recomended .box a{width:100%; display:block; }
 
+
 /* ################################# update ################################# */
 #update{width:100%; height:954px; margin:0 auto; background-color:#fff}
 
@@ -213,6 +241,7 @@ line-height:40px;}
 #EA .desc {color: #fff; font-size: 18px; padding-bottom:30px;}
 #EA .box a{width:100%; display:block;}
 #EA:after{content:""; display:block; clear:both;}
+
 
 /* ################################# footer ################################# */
 #footer{width:100%; background-color:#f5f5f5;}
