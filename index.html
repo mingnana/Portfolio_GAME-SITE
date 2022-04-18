@@ -93,18 +93,15 @@
                <source src="img/index/background.webm" type="video/webm"/>
             </video>
          </div>
-      <div id="txt">
+      	 <div id="txt">
             <h2>Electronic Arts is<span>
             <div id="text_inn">
                <span id="text1"></span>
                <span id="text2"></span>
             </div>
-            
-            <!-- The SVG filter used to create the merging effect -->
             <svg id="filters">
                <defs>
                   <filter id="threshold">
-                     <!-- Basically just a threshold effect - pixels with a high enough opacity are set to full opacity, and all other pixels are set to completely transparent. -->
                      <feColorMatrix in="SourceGraphic"
                            type="matrix"
                            values="1 0 0 0 0
@@ -115,23 +112,18 @@
                </defs>
             </svg>
             <script>
-                              /*
-                  This pen cleverly utilizes SVG filters to create a "Morphing Text" effect. Essentially, it layers 2 text elements on top of each other, and blurs them depending on which text element should be more visible. Once the blurring is applied, both texts are fed through a threshold filter together, which produces the "gooey" effect. Check the CSS - Comment the #container rule's filter out to see how the blurring works!
-               */
 
                const elts = {
                   text1: document.getElementById("text1"),
                   text2: document.getElementById("text2")
                };
 
-               // The strings to morph between. You can change these to anything you want!
                const texts = [
                   "the ultimate destination",
                   "for playing,",
                   "discussing,",
                   "creating games.",
                ];
-               // Controls the speed of morphing.
                const morphTime = 1;
                const cooldownTime = 0.7;
 
@@ -157,9 +149,8 @@
                   setMorph(fraction);
                }
 
-               // A lot of the magic happens here, this is what applies the blur filter to the text.
+
                function setMorph(fraction) {
-                  // fraction = Math.cos(fraction * Math.PI) / -2 + .5;
                   
                   elts.text2.style.filter = `blur(${Math.min(8 / fraction - 8, 100)}px)`;
                   elts.text2.style.opacity = `${Math.pow(fraction, 0.4) * 100}%`;
@@ -182,7 +173,6 @@
                   elts.text1.style.opacity = "0%";
                }
 
-               // Animation loop, which is called every frame.
                function animate() {
                   requestAnimationFrame(animate);
                   
