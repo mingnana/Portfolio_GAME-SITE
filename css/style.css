@@ -112,12 +112,12 @@ h1 img{width:100%; height:100%; }
 
 
 /* 각 li 사진 */
-#featured .no1{background-image:url("resource/img/index/fea1.jpg");}
-#featured .no2{background-image:url("resource/img/index/fea2.jpg");}
-#featured .no3{background-image:url("resource/img/index/fea3.jpg");}
-#featured .no4{background-image:url("resource/img/index/fea4.jpg");}
-#featured .no5{background-image:url("resource/img/index/fea5.jpg");}
-#featured .no6{background-image:url("resource/img/index/fea6.jpg");}
+#featured .no1{background-image:url("./resource/img/index/fea1.jpg");}
+#featured .no2{background-image:url("./resource/img/index/fea2.jpg");}
+#featured .no3{background-image:url("./resource/img/index/fea3.jpg");}
+#featured .no4{background-image:url("./resource/img/index/fea4.jpg");}
+#featured .no5{background-image:url("./resource/img/index/fea5.jpg");}
+#featured .no6{background-image:url("./resource/img/index/fea6.jpg");}
 
 /* 각 li 로고 위치 */
 #featured .no2 .logo{top:115px;}
@@ -281,6 +281,5 @@ line-height:40px;}
 #footer_inn .info ul{width:100%;}
 #footer_inn .info li{display:inline; margin-right:20px; line-height:25px; text-align:center; font-size:14px;}
 #footer_inn .info li a{color:#444;}
-
 /* 기능 */
 #footer a:hover{color:rgb(228, 177, 77);} 
