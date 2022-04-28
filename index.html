@@ -8,9 +8,8 @@
    <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&family=Playfair+Display:wght@700&family=Ramaraja&display=swap" rel="stylesheet">
    <link rel="stylesheet" href="css/reset.css">
    <link rel="stylesheet" href="css/style.css">
-   <title>이민아-포폴</title>
+   <title>index</title>
 </head>
-
 <body>
    <div id="wrap">
       <header id="header">
@@ -23,47 +22,47 @@
             <nav id="gnb">
                <ul>
                   <li class="gnb_game">
-                     <a href="#" title="Games">Games</a>
+                     <a href="#none" title="Games">Games</a>
                      <ul>
-                        <li class="title"><a href="#" title="Games">Games</a></li>
-                        <li><a href="#" title="Latest Games">Latest Games</a></li>
-                        <li><a href="#" title="Coming Soon">Coming Soon</a></li>
-                        <li><a href="#" title="EA SPORTS">EA SPORTS</a></li>
-                        <li><a href="#" title="free-To-Play">free-To-Play</a></li>
-                        <li><a href="#" title="Games Library">Games Library</a></li>
+                        <li class="title"><a href="#none" title="Games">Games</a></li>
+                        <li><a href="#none" title="Latest Games">Latest Games</a></li>
+                        <li><a href="#none" title="Coming Soon">Coming Soon</a></li>
+                        <li><a href="#none" title="EA SPORTS">EA SPORTS</a></li>
+                        <li><a href="#none" title="free-To-Play">free-To-Play</a></li>
+                        <li><a href="#none" title="Games Library">Games Library</a></li>
                      </ul>
                   </li>
                   <li class="gnb_more">
-                     <a href="#" title="More Experiences">More Experiences</a>
+                     <a href="#none" title="More Experiences">More Experiences</a>
                      <ul>
-                        <li class="title"><a href="#" title="More Experiences">More Experiences</a></li>
-                        <li><a href="#" title="EA Play">EA Play</a></li>
-                        <li><a href="#" title="Origin">Origin</a></li>
-                        <li><a href="#" title="Competitive Gaming">Competitive Gaming</a></li>
-                        <li><a href="#" title="EA Play Live">EA Play Live</a></li>
+                        <li class="title"><a href="#none" title="More Experiences">More Experiences</a></li>
+                        <li><a href="#none" title="EA Play">EA Play</a></li>
+                        <li><a href="#none" title="Origin">Origin</a></li>
+                        <li><a href="#none" title="Competitive Gaming">Competitive Gaming</a></li>
+                        <li><a href="#none" title="EA Play Live">EA Play Live</a></li>
                      </ul>
                   </li>
                   <li class="gnb_about">
-                     <a href="#" title="About">About</a>
+                     <a href="#none" title="About">About</a>
                      <ul>
-                        <li class="title"><a href="#" title="About">About</a></li>
-                        <li><a href="#" title="Company">Company</a></li>
-                        <li><a href="#" title="EA Studios">EA Studios</a></li>
-                        <li><a href="#" title="Our Technology">Our Technology</a></li>
-                        <li><a href="#" title="EA Partners">EA Partners</a></li>
-                        <li><a href="#" title="News">News</a></li>
-                        <li><a href="#" title="Inside EA">Inside EA</a></li>
+                        <li class="title"><a href="#none" title="About">About</a></li>
+                        <li><a href="#none" title="Company">Company</a></li>
+                        <li><a href="#none" title="EA Studios">EA Studios</a></li>
+                        <li><a href="#none" title="Our Technology">Our Technology</a></li>
+                        <li><a href="#none" title="EA Partners">EA Partners</a></li>
+                        <li><a href="#none" title="News">News</a></li>
+                        <li><a href="#none" title="Inside EA">Inside EA</a></li>
                      </ul>
                   </li>
                   <li class="gnb_commit">
-                     <a href="#" title="Commitments">Commitments</a>
+                     <a href="#none" title="Commitments">Commitments</a>
                      <ul>
-                        <li class="title"><a href="#" title="Commitments">Commitments</a></li>
-                        <li><a href="#" title="Positive Play">Positive Play</a></li>
-                        <li><a href="#" title="Inclusion &amp; Diversity">Inclusion &amp; Diversity</a></li>
-                        <li><a href="#" title="Community Investment">Community Investment</a></li>
-                        <li><a href="#" title="People &amp; Culture">People &amp; Culture</a></li>
-                        <li><a href="#" title="Environment">Environment</a></li>
+                        <li class="title"><a href="#none" title="Commitments">Commitments</a></li>
+                        <li><a href="#none" title="Positive Play">Positive Play</a></li>
+                        <li><a href="#none" title="Inclusion &amp; Diversity">Inclusion &amp; Diversity</a></li>
+                        <li><a href="#none" title="Community Investment">Community Investment</a></li>
+                        <li><a href="#none" title="People &amp; Culture">People &amp; Culture</a></li>
+                        <li><a href="#none" title="Environment">Environment</a></li>
                      </ul>
                   </li>
                </ul>
@@ -93,109 +92,8 @@
                <source src="resource/img/index/background.webm" type="video/webm"/>
             </video>
          </div>
-      	 <div id="txt">
-            <h2>Electronic Arts is<span>
-            <div id="text_inn">
-               <span id="text1"></span>
-               <span id="text2"></span>
-            </div>
-            <svg id="filters">
-               <defs>
-                  <filter id="threshold">
-                     <feColorMatrix in="SourceGraphic"
-                           type="matrix"
-                           values="1 0 0 0 0
-                                       0 1 0 0 0
-                                       0 0 1 0 0
-                                       0 0 0 255 -100" />
-                  </filter>
-               </defs>
-            </svg>
-            <script>
-
-               const elts = {
-                  text1: document.getElementById("text1"),
-                  text2: document.getElementById("text2")
-               };
-
-               const texts = [
-                  "the ultimate destination",
-                  "for playing,",
-                  "discussing,",
-                  "creating games.",
-               ];
-               const morphTime = 1;
-               const cooldownTime = 0.7;
-
-               let textIndex = texts.length - 1;
-               let time = new Date();
-               let morph = 0;
-               let cooldown = cooldownTime;
-
-               elts.text1.textContent = texts[textIndex % texts.length];
-               elts.text2.textContent = texts[(textIndex + 1) % texts.length];
-
-               function doMorph() {
-                  morph -= cooldown;
-                  cooldown = 0;
-                  
-                  let fraction = morph / morphTime;
-                  
-                  if (fraction > 1) {
-                     cooldown = cooldownTime;
-                     fraction = 1;
-                  }
-                  
-                  setMorph(fraction);
-               }
-
-
-               function setMorph(fraction) {
-                  
-                  elts.text2.style.filter = `blur(${Math.min(8 / fraction - 8, 100)}px)`;
-                  elts.text2.style.opacity = `${Math.pow(fraction, 0.4) * 100}%`;
-                  
-                  fraction = 1 - fraction;
-                  elts.text1.style.filter = `blur(${Math.min(8 / fraction - 8, 100)}px)`;
-                  elts.text1.style.opacity = `${Math.pow(fraction, 0.4) * 100}%`;
-                  
-                  elts.text1.textContent = texts[textIndex % texts.length];
-                  elts.text2.textContent = texts[(textIndex + 1) % texts.length];
-               }
-
-               function doCooldown() {
-                  morph = 0;
-                  
-                  elts.text2.style.filter = "";
-                  elts.text2.style.opacity = "100%";
-                  
-                  elts.text1.style.filter = "";
-                  elts.text1.style.opacity = "0%";
-               }
-
-               function animate() {
-                  requestAnimationFrame(animate);
-                  
-                  let newTime = new Date();
-                  let shouldIncrementIndex = cooldown > 0;
-                  let dt = (newTime - time) / 1000;
-                  time = newTime;
-                  
-                  cooldown -= dt;
-                  
-                  if (cooldown <= 0) {
-                     if (shouldIncrementIndex) {
-                        textIndex++;
-                     }
-                     
-                     doMorph();
-                  } else {
-                     doCooldown();
-                  }
-               }
-
-               animate();
-            </script>
+         <div id="txt">
+            <h2>Electronic Arts is<span>the ultimate destination for playing,</span><span>discussing, and creating games.</span></h2>
             <p class="text">With nearly 30,000 games from AAA to indie and everything in-between. Enjoy exclusive deals,
                automatic game updates, and other great perks.</p>
             <div class="txt_inner">
@@ -252,7 +150,7 @@
                      </a>
                   </li>
                   <li class="no5">
-                     <a href="#" title="fifa">
+                     <a href="#none" title="fifa">
                             <span class="logo">
                                 <img src="resource/img/index/fea5_logo.svg" alt="fifa_logo"/>
                             </span>
@@ -262,7 +160,7 @@
                      </a>
                   </li>
                   <li class="no6">
-                     <a href="#" title="battlefield">
+                     <a href="#none" title="battlefield">
                         <span class="logo">
                            <img src="resource/img/index/fea6_logo.svg" alt="battlefield_logo"/>
                         </span>
@@ -273,7 +171,7 @@
                </ul>
             </div>
             <div class="box">
-               <a href="#" title="more">more Games</a>
+               <a href="#none" title="more">more Games</a>
             </div>
          </div>
          <div id="sale">
@@ -281,27 +179,27 @@
             <div class="sale_inn_small">
                <ul>
                   <li class="no0">
-                     <a href="#" title="Medieval Dynasty">
+                     <a href="#none" title="Medieval Dynasty">
                         <img src="resource/img/index/sale_s_0.jpg" alt="Medieval Dynasty"/>
                      </a>
                   </li>
                   <li class="no1">
-                     <a href="#" title="SteamWorld">
+                     <a href="#none" title="SteamWorld">
                         <img src="resource/img/index/sale_s_1.jpg" alt="SteamWorld"/>
                      </a>
                   </li>
                   <li class="no2">
-                     <a href="#" title="play_together_sale">
+                     <a href="#none" title="play_together_sale">
                         <img src="resource/img/index/sale_s_2.gif" alt="play_together_sale"/>
                      </a>
                   </li>
                   <li class="no3">
-                     <a href="#" title="risk_of_rain">
+                     <a href="#none" title="risk_of_rain">
                         <img src="resource/img/index/sale_s_3.gif" alt="risk_of_rain"/>
                      </a>
                   </li>
                   <li class="no4">
-                     <a href="#" title="Loop_Hero">
+                     <a href="#none" title="Loop_Hero">
                         <img src="resource/img/index/sale_s_4.jpg" alt="Loop_Hero"/>
                      </a>
                   </li>
@@ -309,12 +207,12 @@
             </div>
             <div class="sale_inn_big">
                <p class="img">
-                  <a href="#" title="PUBG">
+                  <a href="#none" title="PUBG">
                      <img src="resource/img/index/sale_b_0.jpg" alt="PUBG"/>
                   </a>
                </p>
                <p>
-                  <a href="#" title="Hollow_Knight">
+                  <a href="#none" title="Hollow_Knight">
                      <img src="resource/img/index/sale_b_1.jpg" alt="Hollow_Knight"/>
                   </a>
                </p>
@@ -328,7 +226,7 @@
                   <span>Visit this page for Leicester City's latest statements and updates relating to the COVID-19 pandemic.</span>
                </p>
                <div>
-                  <a href="#" title="sign in">-&gt; Sign in</a>
+                  <a href="#none" title="sign in">-&gt; Sign in</a>
                </div>
             </div>
          </div>
@@ -338,46 +236,46 @@
                <div class="left">
                   <ul>
                      <li>
-                        <a href="#" title="reco1">
+                        <a href="#none" title="reco1">
                            <img src="resource/img/index/fea1.jpg" alt=""/>
                         </a>
                      </li>
                      <li>
-                        <a href="#" title="reco2">
-                           <img src="resource/img/index/fea1.jpg" alt="#"/>
+                        <a href="#none" title="reco2">
+                           <img src="resource/img/index/fea1.jpg" alt="#none"/>
                         </a>
                      </li>
                   </ul>
                </div>
                <div class="middle">
                   <p>
-                     <a href="#" title="reco3">
-                        <img src="resource/img/index/fea1.jpg" alt="#"/>
+                     <a href="#none" title="reco3">
+                        <img src="resource/img/index/fea1.jpg" alt="#none"/>
                      </a>
                   </p>
                </div>
                <div class="right">
                   <ul>
                      <li class="top">
-                        <a href="#" title="reco1">
-                           <img src="resource/img/index/fea1.jpg" alt="#"/>
+                        <a href="#none" title="reco1">
+                           <img src="resource/img/index/fea1.jpg" alt="#none"/>
                         </a>
                      </li>
                      <li class="bottom">
-                        <a href="#" title="reco1">
-                           <img src="resource/img/index/fea1.jpg" alt="#"/>
+                        <a href="#none" title="reco1">
+                           <img src="resource/img/index/fea1.jpg" alt="#none"/>
                         </a>
                      </li>
                      <li class="bottom">
-                        <a href="#" title="reco1">
-                           <img src="resource/img/index/fea1.jpg" alt="#"/>
+                        <a href="#none" title="reco1">
+                           <img src="resource/img/index/fea1.jpg" alt="#none"/>
                         </a>
                      </li>
                   </ul>
                </div>
             </div>
             <div class="box">
-               <a href="#" title="more">more Games</a>
+               <a href="#none" title="more">more Games</a>
             </div>
          </div>
          <div id="update">
@@ -385,47 +283,47 @@
             <div class="menu">
                 <ul>
                     <li>
-                        <a href="#" title="NEWS">
+                        <a href="#none" title="NEWS">
                             NEWS
                         </a>
                     </li>
                     <li>
-                        <a href="#" title="Apex">
+                        <a href="#none" title="Apex">
                             Apex
                         </a>
                     </li>
                     <li>
-                        <a href="#" title="fifa">
+                        <a href="#none" title="fifa">
                             fifa
                         </a>
                     </li>
                     <li>
-                        <a href="#" title="Battlefield">
+                        <a href="#none" title="Battlefield">
                             Battlefield
                         </a>
                     </li>
                     <li>
-                        <a href="#" title="The Sims4">
+                        <a href="#none" title="The Sims4">
                             The Sims4
                         </a>
                     </li>
                     <li>
-                        <a href="#" title="F1 2021">
+                        <a href="#none" title="F1 2021">
                             F1 2021
                         </a>
                     </li>
                     <li>
-                        <a href="#" title="ST Play">
+                        <a href="#none" title="ST Play">
                             ST Play
                         </a>
                     </li>
                     <li>
-                        <a href="#" title="ST News">
+                        <a href="#none" title="ST News">
                             ST News
                         </a>
                     </li>
                     <li>
-                        <a href="#" title="ST inside">
+                        <a href="#none" title="ST inside">
                             ST inside
                         </a>
                     </li>
@@ -434,43 +332,43 @@
             <div class="game">
                <ul>
                   <li class="no0">
-                     <a href="#" title="news0">
-                        <img src="resource/img/index/fea1.jpg" alt="#"/>
+                     <a href="#none" title="news0">
+                        <img src="resource/img/index/fea1.jpg" alt="#none"/>
                      </a>
                   </li>
                   <li class="no1">
-                     <a href="#" title="news1">
-                        <img src="resource/img/index/fea1.jpg" alt="#"/>
+                     <a href="#none" title="news1">
+                        <img src="resource/img/index/fea1.jpg" alt="#none"/>
                      </a>
                   </li>
                   <li class="no2">
-                     <a href="#" title="news2">
-                        <img src="resource/img/index/fea1.jpg" alt="#"/>
+                     <a href="#none" title="news2">
+                        <img src="resource/img/index/fea1.jpg" alt="#none"/>
                      </a>
                   </li>
                   <li class="no3">
-                     <a href="#" title="news3">
-                        <img src="resource/img/index/fea1.jpg" alt="#"/>
+                     <a href="#none" title="news3">
+                        <img src="resource/img/index/fea1.jpg" alt="#none"/>
                      </a>
                   </li>
                   <li class="no4">
-                     <a href="#" title="news4">
-                        <img src="resource/img/index/fea1.jpg" alt="#"/>
+                     <a href="#none" title="news4">
+                        <img src="resource/img/index/fea1.jpg" alt="#none"/>
                      </a>
                   </li>
                   <li class="no5">
-                     <a href="#" title="news5">
-                        <img src="resource/img/index/fea1.jpg" alt="#"/>
+                     <a href="#none" title="news5">
+                        <img src="resource/img/index/fea1.jpg" alt="#none"/>
                      </a>
                   </li>
                   <!-- <li class="no6">
-                     <a href="#" title="news6">
-                        <img src="resource/img/index/fea1_1.jpg" alt="#"/>
+                     <a href="#none" title="news6">
+                        <img src="resource/img/index/fea1_1.jpg" alt="#none"/>
                      </a>
                   </li>
                   <li class="no7">
-                     <a href="#" title="news7">
-                        <img src="resource/img/index/fea1_1.jpg" alt="#"/>
+                     <a href="#none" title="news7">
+                        <img src="resource/img/index/fea1_1.jpg" alt="#none"/>
                      </a>
                   </li> -->
                </ul>
@@ -487,7 +385,7 @@
                   and a library of top titles.
                </p>
                <p class="box">
-                  <a href="#" title="Join Now">Join Now</a>
+                  <a href="#none" title="Join Now">Join Now</a>
                </p>
             </div>
          </div>
@@ -498,13 +396,13 @@
          <div id="footer_inn">
             <div class="gnb">
                <ul>
-                  <li><a href="#" title="Game Library">Game Library</a></li>
-                  <li><a href="#" title="Subscribe">Subscribe</a></li>
-                  <li><a href="#" title="Redeem Code">Redeem Code</a></li>
-                  <li><a href="#" title="Origin">Origin</a></li>
-                  <li><a href="#" title="About">About</a></li>
-                  <li><a href="#" title="Accessibility">Accessibility</a></li>
-                  <li><a href="#" title="Help">Help</a></li>
+                  <li><a href="#none" title="Game Library">Game Library</a></li>
+                  <li><a href="#none" title="Subscribe">Subscribe</a></li>
+                  <li><a href="#none" title="Redeem Code">Redeem Code</a></li>
+                  <li><a href="#none" title="Origin">Origin</a></li>
+                  <li><a href="#none" title="About">About</a></li>
+                  <li><a href="#none" title="Accessibility">Accessibility</a></li>
+                  <li><a href="#none" title="Help">Help</a></li>
                </ul>
             </div>
             <div class="footer_bottom">
@@ -513,18 +411,18 @@
                </p>
                <div class="infoArea">
                   <ul>
-                     <li><a href="#" title="Legal">Legal</a></li>
-                     <li><a href="#" title="User Agreement">User Agreement</a></li>
-                     <li><a href="#" title="Privacy &amp; Cookie Policy (Your Privacy Rights">Privacy &amp; Cookie Policy (Your Privacy Rights)</a></li>
-                     <li><a href="#" title="Online Service Updates">Online Service Updates</a></li>
-                     <li><a href="#" title="Security">Security</a></li>
-                     <li><a href="#" title="YouTube Terms of Service">YouTube Terms of Service</a></li>
+                     <li><a href="#none" title="Legal">Legal</a></li>
+                     <li><a href="#none" title="User Agreement">User Agreement</a></li>
+                     <li><a href="#none" title="Privacy &amp; Cookie Policy (Your Privacy Rights">Privacy &amp; Cookie Policy (Your Privacy Rights)</a></li>
+                     <li><a href="#none" title="Online Service Updates">Online Service Updates</a></li>
+                     <li><a href="#none" title="Security">Security</a></li>
+                     <li><a href="#none" title="YouTube Terms of Service">YouTube Terms of Service</a></li>
                   </ul>
                   <p class="policy">
-                     <a href="#" title="Google Privacy Policy">Google Privacy Policy</a>
+                     <a href="#none" title="Google Privacy Policy">Google Privacy Policy</a>
                   </p>
                   <p class="copy">
-                     <a href="#" title="© 2022 Electronic Arts Inc.">&copy; 2022 Electronic Arts Inc.</a>
+                     <a href="#none" title="© 2022 Electronic Arts Inc.">&copy; 2022 Electronic Arts Inc.</a>
                   </p>
                </div>
                <div class="siteArea">
@@ -542,27 +440,27 @@
                   <div class="sns">
                      <ul>
                         <li>
-                           <a href="#" title="페이스북">
+                           <a href="#none" title="페이스북">
                               <img src="resource/img/index/sns_fb.svg" alt="페이스북"/>
                            </a>
                         </li>
                         <li>
-                           <a href="#" title="링크드인">
+                           <a href="#none" title="링크드인">
                               <img src="resource/img/index/sns_in.svg" alt="링크드인"/>
                            </a>
                         </li>
                         <li>
-                           <a href="#" title="인스타">
+                           <a href="#none" title="인스타">
                               <img src="resource/img/index/sns_ins.svg" alt="인스타"/>
                            </a>
                         </li>
                         <li>
-                           <a href="#" title="유튜브">
+                           <a href="#none" title="유튜브">
                               <img src="resource/img/index/sns_yt.svg" alt="유튜브"/>
                            </a>
                         </li>
                         <li>
-                           <a href="#" title="트위터">
+                           <a href="#none" title="트위터">
                               <img src="resource/img/index/sns_tw.svg" alt="트위터"/>
                            </a>
                         </li>
@@ -571,12 +469,12 @@
                </div>
                <div class="info">
                   <ul>
-                     <li><a href="#" title="Impact Report">Impact Report</a></li>
-                     <li><a href="#" title="Executives">Executives</a></li>
-                     <li><a href="#" title="Privacy & Security">Privacy & Security</a></li>
-                     <li><a href="#" title="Political Activities">Political Activities</a></li>
-                     <li><a href="#" title="Global Human Rights Statement">Global Human Rights Statement</a></li>
-                     <li><a href="#" title="Partner With Us">Partner With Us</a></li>
+                     <li><a href="#none" title="Impact Report">Impact Report</a></li>
+                     <li><a href="#none" title="Executives">Executives</a></li>
+                     <li><a href="#none" title="Privacy & Security">Privacy & Security</a></li>
+                     <li><a href="#none" title="Political Activities">Political Activities</a></li>
+                     <li><a href="#none" title="Global Human Rights Statement">Global Human Rights Statement</a></li>
+                     <li><a href="#none" title="Partner With Us">Partner With Us</a></li>
                   </ul>
                </div>
             </div>
