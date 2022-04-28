@@ -97,14 +97,6 @@ transform:translatey(0px); transition:all 0.3s ease-in-out;}
    transform:translatey(-50px); opacity:0; transition:transform 0.3s linear, opacity 0.3s linear;  }
 
 
-/* 각 li 사진 */
-#featured .no1{background-image:url("resource/img/index/fea1.jpg");}
-#featured .no2{background-image:url("resource/img/index/fea2.jpg");}
-#featured .no3{background-image:url("resource/img/index/fea3.jpg");}
-#featured .no4{background-image:url("resource/img/index/fea4.jpg");}
-#featured .no5{background-image:url("resource/img/index/fea5.jpg");}
-#featured .no6{background-image:url("resource/img/index/fea6.jpg");}
-
 /* 각 li 로고 위치 */
 #featured .no2 .logo{top:115px;}
 #featured .no3 .logo{top:131px;}
