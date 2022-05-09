@@ -1,29 +1,69 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-   <meta charset="UTF-8">
-   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&family=Ramaraja&display=swap" rel="stylesheet">
-   <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&family=Playfair+Display:wght@700&family=Ramaraja&display=swap" rel="stylesheet">
-   <link rel="stylesheet" href="css/reset.css">
-   <link rel="stylesheet" href="css/style.css">
-   <title>index</title>
-   <style>
-	/* 각 li 사진 */
-	#featured .no1{background-image:url("resource/img/index/fea1.jpg");}
-	#featured .no2{background-image:url("resource/img/index/fea2.jpg");}
-	#featured .no3{background-image:url("resource/img/index/fea3.jpg");}
-	#featured .no4{background-image:url("resource/img/index/fea4.jpg");}
-	#featured .no5{background-image:url("resource/img/index/fea5.jpg");}
-	#featured .no6{background-image:url("resource/img/index/fea6.jpg");}
-   </style>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&family=Ramaraja&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&family=Playfair+Display:wght@700&family=Ramaraja&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/index.css">
+    <title>index</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="./libs/jquery-3.5.1.min.js"></script>
+    <script>
+         $(document).ready(function(){
+               allMenu();
+               btnClick();
+               hideVideo();
+               showVideo();
+         });
+         // 헤더 버튼
+         function allMenu(){
+            $(".menu_bar").click(function(){
+               $(this).toggleClass('allMenu');
+            });
+         }
+         // sale 양옆 버튼
+         function btnClick(){
+               function prevMove(){
+                  $("#sale_ul").prepend($("#sale_ul li:last"));
+                  $("#sale_ul").css({"marginLeft":"-233px"});
+               }
+               prevMove();
+               $(".prevBtn").click(function(){
+                  $("#sale_ul").animate({"marginLeft":"+=233px"},300,"swing",function(){
+                     prevMove();
+                  });
+               });
+
+               $(".nextBtn").click(function(){
+                  $("#sale_ul").animate({"marginLeft":"-=233px"},300,"swing",function(){
+                     $("#sale_ul").append($("#sale_ul li:eq(0)"));
+                     $("#sale_ul").css({"marginLeft":"-233px"});
+                  });
+               });
+         }
+         // sale 비디오기능
+         function hideVideo(){
+               $(".sale_b_img video").hide()
+         };
+         function showVideo(){
+               $(".sale_b_img").mouseover(function(){
+                  $(this).children().children('video').show();
+               })
+               .mouseout(function(){
+                  $(this).children().children('video').hide()
+               });
+         }
+     
+    </script>
 </head>
 <body>
    <div id="wrap">
       <header id="header">
          <div id="header_inn">
-            <h1>
+            <h1 id="logo">
                <a href="https://www.ea.com/" title="메인"> 
                   <img src="resource/img/index/ea_logo.svg" alt="로고"/>
                </a>
@@ -88,13 +128,62 @@
                   </a>
                </div>
                <div class="menu_bar">
-                  <p></p>
-                  <p></p>
-                  <p></p>
+                  <span></span>
+                  <span></span>
+                  <span></span>
                </div>
             </div>
          </div>
       </header>
+      <div id="all_menu">
+         <div id="all_menu_inn">
+            <h2 id="logo">
+               <a href="https://www.ea.com/" title="메인"> 
+                  <img src="resource/img/index/ea_logo.svg" alt="로고"/>
+               </a>
+            </h2>
+            <div class="all_menu_gnb">
+               <ul>
+                  <li>
+                     Featured Games
+                     <ul>
+                        <li>Mass effect</li>
+                        <li>lost in Random</li>
+                        <li>NHL22</li>
+                        <li>It takes two</li>
+                     </ul>
+                  </li>
+                  <li>
+                     Games
+                     <ul>
+                        <li>Latest Game</li>
+                        <li>Coming Soon</li>
+                        <li>EA SPORTS</li>
+                        <li>free-To-Play</li>
+                     </ul>
+                  </li>
+                  <li>
+                     More Experiences
+                     <ul>
+                        <li>EA Play</li>
+                        <li>Origin</li>
+                        <li>Competitive Gaming</li>
+                        <li>EA Play Live</li>
+                     </ul>
+                  </li>
+                  <li>
+                     About
+                     <ul>
+                        <li>Company</li>
+                        <li>EA Studio</li>
+                        <li>Our Technology</li>
+                        <li>EA Patners</li>
+                     </ul>
+                  </li>
+               </ul>
+            </div>
+         </div>
+      </div>
       <div id="container">
          <div id="visual">
             <video controls poster="resource/img/index/background.gif" autoplay muted>
@@ -185,46 +274,92 @@
          </div>
          <div id="sale">
             <h2>Games On Sale</h2>
-            <div class="sale_inn_small">
-               <ul>
-                  <li class="no0">
-                     <a href="#none" title="Medieval Dynasty">
-                        <img src="resource/img/index/sale_s_0.jpg" alt="Medieval Dynasty"/>
-                     </a>
-                  </li>
-                  <li class="no1">
-                     <a href="#none" title="SteamWorld">
-                        <img src="resource/img/index/sale_s_1.jpg" alt="SteamWorld"/>
-                     </a>
-                  </li>
-                  <li class="no2">
-                     <a href="#none" title="play_together_sale">
-                        <img src="resource/img/index/sale_s_2.gif" alt="play_together_sale"/>
-                     </a>
-                  </li>
-                  <li class="no3">
-                     <a href="#none" title="risk_of_rain">
-                        <img src="resource/img/index/sale_s_3.gif" alt="risk_of_rain"/>
-                     </a>
-                  </li>
-                  <li class="no4">
-                     <a href="#none" title="Loop_Hero">
-                        <img src="resource/img/index/sale_s_4.jpg" alt="Loop_Hero"/>
-                     </a>
-                  </li>
-               </ul>
+            <div id="sale_inn_small">
+                <p class="prevBtn" id="btn">
+                    <img src="resource/img/index/prevBtn.png" alt="이전버튼"/>
+                </p>
+                <div id="sale_ul_Area">
+                    <ul id="sale_ul">
+                       <li class="no0">
+                          <a href="#none" title="Medieval Dynasty">
+                            <img src="resource/img/index/sale_s_0.jpg" alt="Medieval Dynasty"/>
+                          </a>
+                       </li>
+                       <li class="no1">
+                          <a href="#none" title="SteamWorld">
+                            <img src="resource/img/index/sale_s_1.jpg" alt="SteamWorld"/>
+                          </a>
+                       </li>
+                       <li class="no2">
+                          <a href="#none" title="play_together_sale">
+                            <img src="resource/img/index/sale_s_2.gif" alt="play_together_sale"/>
+                          </a>
+                       </li>
+                       <li class="no3">
+                          <a href="#none" title="risk_of_rain">
+                            <img src="resource/img/index/sale_s_3.gif" alt="risk_of_rain"/>
+                          </a>
+                       </li>
+                       <li class="no4">
+                          <a href="#none" title="Loop_Hero">
+                            <img src="resource/img/index/sale_s_4.jpg" alt="Loop_Hero"/>
+                          </a>
+                       </li>
+                       <li class="no5">
+                          <a href="#none" title="Devolver">
+                            <img src="resource/img/index/sale_s_5.jpg" alt="Devolver"/>
+                          </a>
+                       </li>
+                       <li class="no6">
+                          <a href="#none" title="Going_Rogue">
+                            <img src="resource/img/index/sale_s_6.gif" alt="Going_Rogue"/>
+                          </a>
+                       </li>
+                       <li class="no7">
+                          <a href="#none" title="Mechanic">
+                            <img src="resource/img/index/sale_s_7.jpg" alt="Mechanic"/>
+                          </a>
+                       </li>
+                       <li class="no8">
+                          <a href="#none" title="Raw_fury">
+                            <img src="resource/img/index/sale_s_8.jpg" alt="Raw_fury"/>
+                          </a>
+                       </li>
+                       <li class="no9">
+                          <a href="#none" title="Peglin">
+                            <img src="resource/img/index/sale_s_9.jpg" alt="Peglin"/>
+                          </a>
+                       </li>
+                       <li class="no10">
+                          <a href="#none" title="assetto">
+                            <img src="resource/img/index/sale_s_10.gif" alt="assetto"/>
+                          </a>
+                       </li>
+                    </ul>
+                </div>
+                <p class="nextBtn" id="btn">
+                    <img src="resource/img/index/nextBtn.png" alt="다음버튼"/>
+                </p>
             </div>
-            <div class="sale_inn_big">
-               <p class="img">
-                  <a href="#none" title="PUBG">
-                     <img src="resource/img/index/sale_b_0.jpg" alt="PUBG"/>
-                  </a>
-               </p>
-               <p>
-                  <a href="#none" title="Hollow_Knight">
-                     <img src="resource/img/index/sale_b_1.jpg" alt="Hollow_Knight"/>
-                  </a>
-               </p>
+            <div id="sale_inn_big">
+                <ul>
+                    <li class="sale_b_img">
+                        <a href="#none" title="PUBG">
+                            <img src="resource/img/index/sale_b_0.jpg" alt="PUBG"/>
+                            <video controls poster="resource/img/index/sale_b_0.jpg" autoplay muted>
+                                <source src="resource/img/index/sale_b_0.webm" type="video/webm">
+                            </video>  
+                        </a>
+                    </li>
+                    <li class="sale_b_img">
+                        <a href="#none" title="Hollow_Knight">
+                            <img class="img" src="resource/img/index/sale_b_1.jpg" alt="Hollow_Knight"/>
+                            <video controls poster="resource/img/index/sale_b_1.jpg" autoplay muted>
+                                <source src="resource/img/index/sale_b_1.webm" type="video/webm">
+                            </video>   
+                        </a>
+                    </li>
+                </ul>
             </div>
          </div>
          <div id="middle_box">
@@ -245,39 +380,41 @@
                <div class="left">
                   <ul>
                      <li>
-                        <a href="#none" title="reco1">
-                           <img src="resource/img/index/fea1.jpg" alt=""/>
+                        <a href="#none" title="LudoNarraCon">
+                           <img src="resource/img/index/rec0.jpg" alt="LudoNarraCon"/>
                         </a>
                      </li>
                      <li>
-                        <a href="#none" title="reco2">
-                           <img src="resource/img/index/fea1.jpg" alt="#none"/>
+                        <a href="#none" title="#none">
+                           <img src="resource/img/index/rec1.jpg" alt="#none"/>
                         </a>
                      </li>
                   </ul>
                </div>
                <div class="middle">
-                  <p>
-                     <a href="#none" title="reco3">
-                        <img src="resource/img/index/fea1.jpg" alt="#none"/>
-                     </a>
-                  </p>
+                  <ul>
+                     <li>
+                        <a href="#none" title="#none">
+                           <img src="resource/img/index/rec2.jpg" alt="#none"/>
+                        </a>
+                     </li>
+                  </ul>
                </div>
                <div class="right">
                   <ul>
                      <li class="top">
-                        <a href="#none" title="reco1">
-                           <img src="resource/img/index/fea1.jpg" alt="#none"/>
+                        <a href="#none" title="#none">
+                           <img src="resource/img/index/rec3.jpg" alt="#none"/>
                         </a>
                      </li>
                      <li class="bottom">
-                        <a href="#none" title="reco1">
-                           <img src="resource/img/index/fea1.jpg" alt="#none"/>
+                        <a href="#none" title="#none">
+                           <img src="resource/img/index/rec5.jpg" alt="#none"/>
                         </a>
                      </li>
                      <li class="bottom">
-                        <a href="#none" title="reco1">
-                           <img src="resource/img/index/fea1.jpg" alt="#none"/>
+                        <a href="#none" title="#none">
+                           <img src="resource/img/index/rec6.jpg" alt="#none"/>
                         </a>
                      </li>
                   </ul>
