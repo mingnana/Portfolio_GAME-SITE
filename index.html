@@ -25,7 +25,7 @@
       // 헤더 버튼
       function allMenu(){
       $(".menu_bar").click(function(){
-         $(this).toggleClass('allMenu');
+         $(this).toggleClass('allMenu').css("transition","all 1s");
       });
       }
       // sale 양옆 버튼
@@ -62,18 +62,29 @@
       }
       function all_menu(){
          $(".menu_bar").click(function(){
-            // document.body.style.overflow = "hidden"
+            // $(this).children().css("background-color","#000");
             var all = $("#all_menu_box");
             var header = $("#header");
             var gnb = $("#gnb")
             var body = $("body")
 
-            all.toggleClass("active").css("transition","all 0.4s")
+            all.toggleClass("active").css("transition","all 0.7s")
             header.toggleClass("active");
             gnb.toggleClass("active");
             body.toggleClass("active");
          })
       }
+      
+      // 채팅기능
+      var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+      (function(){
+      var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+      s1.async=true;
+      s1.src='https://embed.tawk.to/627d395f7b967b11798f1320/1g2sig7ha';
+      s1.charset='UTF-8';
+      s1.setAttribute('crossorigin','*');
+      s0.parentNode.insertBefore(s1,s0);
+      })();
     </script>
 </head>
 <body>

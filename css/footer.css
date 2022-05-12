@@ -1,5 +1,4 @@
 @import "footer.css";
-
 #footer{width:100%; background-color:#f5f5f5;}
 #footer:after{content:""; display:block; clear:both;}
 #footer a{color:#777;}
@@ -46,5 +45,5 @@
 #footer_inn .info ul{width:100%;}
 #footer_inn .info li{display:inline; margin-right:20px; line-height:25px; text-align:center; font-size:14px;}
 #footer_inn .info li a{color:#444;}
-/* ê¸°ëŠ¥ */
+/* ±â´É */
 #footer a:hover{color:rgb(228, 177, 77);} 

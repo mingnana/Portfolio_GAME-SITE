@@ -1,15 +1,14 @@
 @import "header.css";
-
 #header{width:100%; height:110px; 
     background:linear-gradient(to bottom, rgba(0,0,0,1), rgba(0,0,0,0));
     position:absolute; z-index:1;}
 #header a{color:#fff;}
 #header_inn{width:1400px; padding-top:30px; height:61px; margin:0 auto;}
-/* ë¡œê³  */
+/* ·Î°í */
 h1{width:100px; height:100%; float:left;}
 h1 a{width:100%; height:100%;}
 h1 img{width:100%;  }
-/* ë©”ë‰´ */
+/* ¸Þ´º */
 #gnb{width:500px; padding-top:20px; float:left;}
 #gnb ul{width:100%; height:100%;}
 #gnb li{margin-left:30px;
@@ -29,7 +28,7 @@ h1 img{width:100%;  }
     position:absolute; left:0px; top:0;
     transform:translatex(-140px); transition:transform 0.2s linear;}
 
-/* buyê¸°ëŠ¥ */
+/* buy±â´É */
 #header_btn .buy:hover, #header_btn .buy a:focus{width:134px; height:44px; line-height:44px; border:none;}
 #header_btn .buy:hover p{transform:translatex(140px);}
 #header_btn .buy:hover a:before{transform:translatex(-105px);}
@@ -39,6 +38,7 @@ h1 img{width:100%;  }
 #header_btn .lang .img{width:40px; margin-top:5px; float:left;}
 #header_btn .lang img{width:100%;}
 #header_btn .lang .text{line-height:61px; float:left; font-weight:700;}
+
 /* menu_bar*/
 #header_btn .menu_bar{width:50px; margin-top:15px; float:left;}
 #header_btn .menu_bar p{width:35px; margin-top:5px; height:3px; background:#fff;}
