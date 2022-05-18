@@ -15,77 +15,95 @@
 
     </style>
     <script>
-      $(document).ready(function(){
-         allMenu();
-         btnClick();
-         hideVideo();
-         showVideo();
-         all_menu();
-      });
-      // 헤더 버튼
-      function allMenu(){
+   $(document).ready(function(){
+      allMenu();
+      btnClick();
+      hideVideo();
+      showVideo();
+      all_menu();
+      // $("#upNews").siblings('.updateCate').hide();
+      $("#upNews").hide();
+
+   })
+
+   // 채팅기능
+   var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+   (function(){
+   var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+   s1.async=true;
+   s1.src='https://embed.tawk.to/627d395f7b967b11798f1320/1g2sig7ha';
+   s1.charset='UTF-8';
+   s1.setAttribute('crossorigin','*');
+   s0.parentNode.insertBefore(s1,s0);
+   })();
+
+
+   // 헤더 버튼
+   function allMenu(){
       $(".menu_bar").click(function(){
-         $(this).toggleClass('allMenu').css("transition","all 1s");
+      $(this).toggleClass('allMenu').css("transition","all 1s");
       });
+   }
+   // sale 양옆 버튼
+   function btnClick(){
+      function prevMove(){
+            $("#sale_ul").prepend($("#sale_ul li:last"));
+            $("#sale_ul").css({"marginLeft":"-233px"});
       }
-      // sale 양옆 버튼
-      function btnClick(){
-         function prevMove(){
-               $("#sale_ul").prepend($("#sale_ul li:last"));
+      prevMove();
+      $(".prevBtn").click(function(){
+            $("#sale_ul").animate({"marginLeft":"+=233px"},300,"swing",function(){
+               prevMove();
+            });
+      });
+
+      $(".nextBtn").click(function(){
+            $("#sale_ul").animate({"marginLeft":"-=233px"},300,"swing",function(){
+               $("#sale_ul").append($("#sale_ul li:eq(0)"));
                $("#sale_ul").css({"marginLeft":"-233px"});
-         }
-         prevMove();
-         $(".prevBtn").click(function(){
-               $("#sale_ul").animate({"marginLeft":"+=233px"},300,"swing",function(){
-                  prevMove();
-               });
-         });
+            });
+      });
+   }
+   // sale 비디오기능
+   function hideVideo(){
+      $(".sale_b_img video").hide()
+   };
+   function showVideo(){
+      $(".sale_b_img").mouseover(function(){
+            $(this).children().children('video').show();
+      })
+      .mouseout(function(){
+            $(this).children().children('video').hide()
+      });
+   }
+   function all_menu(){
+      $(".menu_bar").click(function(){
+         var all = $("#all_menu_box");
+         var header = $("#header");
+         var gnb = $("#gnb")
+         var body = $("body")
 
-         $(".nextBtn").click(function(){
-               $("#sale_ul").animate({"marginLeft":"-=233px"},300,"swing",function(){
-                  $("#sale_ul").append($("#sale_ul li:eq(0)"));
-                  $("#sale_ul").css({"marginLeft":"-233px"});
-               });
-         });
-      }
-      // sale 비디오기능
-      function hideVideo(){
-         $(".sale_b_img video").hide()
-      };
-      function showVideo(){
-         $(".sale_b_img").mouseover(function(){
-               $(this).children().children('video').show();
-         })
-         .mouseout(function(){
-               $(this).children().children('video').hide()
-         });
-      }
-      function all_menu(){
-         $(".menu_bar").click(function(){
-            // $(this).children().css("background-color","#000");
-            var all = $("#all_menu_box");
-            var header = $("#header");
-            var gnb = $("#gnb")
-            var body = $("body")
+         all.toggleClass("active").css("transition","all 0.7s")
+         header.toggleClass("active");
+         gnb.toggleClass("active");
+         body.toggleClass("active");
+      })
+   }
 
-            all.toggleClass("active").css("transition","all 0.7s")
-            header.toggleClass("active");
-            gnb.toggleClass("active");
-            body.toggleClass("active");
-         })
-      }
-      
-      // 채팅기능
-      var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
-      (function(){
-      var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
-      s1.async=true;
-      s1.src='https://embed.tawk.to/627d395f7b967b11798f1320/1g2sig7ha';
-      s1.charset='UTF-8';
-      s1.setAttribute('crossorigin','*');
-      s0.parentNode.insertBefore(s1,s0);
-      })();
-    </script>
+   // update 메뉴
+   function clickNews(){
+   $(".menu li").children("a:eq(0)").css({"backgroundImage":"-webkit-linear-gradient(transparent 60%, rgba(0,255,180,0.6) 5px)"})
+   $("#upNews").show(500);
+   $("#upNews").siblings('.updateCate').hide();
+}
+   
+   
+
+
+   
+
+
+   </script>
 </head>
 <body>
    <div id="wrap">
@@ -454,96 +472,240 @@
             <div class="menu">
                 <ul>
                     <li>
-                        <a href="#none" title="NEWS">
-                            NEWS
+                        <a href="#none" title="NEWS" onclick="clickNews()">
+                           EA NEWS
                         </a>
                     </li>
                     <li>
-                        <a href="#none" title="Apex">
-                            Apex
+                        <a href="#none" title="EA Play" onclick="clickPlay()">
+                           EA Play
                         </a>
                     </li>
                     <li>
-                        <a href="#none" title="fifa">
-                            fifa
+                        <a href="#none" title="Modden NFL" onclick="clickNFL()">
+                           Modden NFL
                         </a>
                     </li>
                     <li>
-                        <a href="#none" title="Battlefield">
-                            Battlefield
+                        <a href="#none" title="Apex Legends" onclick="clickApex()">
+                           Apex Legends
                         </a>
                     </li>
                     <li>
-                        <a href="#none" title="The Sims4">
-                            The Sims4
+                        <a href="#none" title="FIFA" onclick="clickFIFA()">
+                           FIFA
                         </a>
                     </li>
                     <li>
-                        <a href="#none" title="F1 2021">
-                            F1 2021
+                        <a href="#none" title="Battlefield" onclick="clickBa()">
+                           Battlefield
                         </a>
                     </li>
                     <li>
-                        <a href="#none" title="ST Play">
-                            ST Play
+                        <a href="#none" title="The Sims4" onclick="clickSims()">
+                           The Sims4
                         </a>
                     </li>
                     <li>
-                        <a href="#none" title="ST News">
-                            ST News
+                        <a href="#none" title="F1" onclick="clickF1()">
+                           F1
                         </a>
                     </li>
                     <li>
-                        <a href="#none" title="ST inside">
-                            ST inside
+                        <a href="#none" title="inside EA" onclick="clickIn()">
+                           inside EA
                         </a>
                     </li>
                 </ul>
             </div>
-            <div class="game">
+            <div class="updateCate" id="upNews">
                <ul>
-                  <li class="no0">
-                     <a href="#none" title="news0">
-                        <img src="resource/img/index/fea1.jpg" alt="#none"/>
-                     </a>
+                  <li class="updateLi contNews">
+                     <div class="contTop">
+                        <h3>Electronic Arts Inc.</h3>
+                        <h4>May 10. 2022</h4>
+                     </div>
+                     <div class="contDesc">
+                        <h3>
+                           Welcome to the Club
+                           EA SPORTS FC™ is the Future of Interactive Football
+                        </h3>
+                        <h4>
+                           A New Era Begins in July 2023 - After EA SPORTS Delivers Most Expansive FIFA Ever This Year
+                        </h4>
+                     </div>
                   </li>
-                  <li class="no1">
-                     <a href="#none" title="news1">
-                        <img src="resource/img/index/fea1.jpg" alt="#none"/>
-                     </a>
+                  <li class="updateLi contNews">
+                     <div class="contTop">
+                        <h3>Electronic Arts Inc.</h3>
+                        <h4>May 10. 2022</h4>
+                     </div>
+                     <div class="contDesc">
+                        <h3>
+                           Electronic Arts Reports
+                           Q4 FY22 Financial Results
+                        </h3>
+                        <h4>
+                           REDWOOD CITY, CA – May 10, 2022 – Electronic Arts Inc. (NASDAQ: EA) today announced preliminary financial results for its fourth quarter and fiscal year ended March 31, 2022.</h4>
+                     </div>
                   </li>
-                  <li class="no2">
-                     <a href="#none" title="news2">
-                        <img src="resource/img/index/fea1.jpg" alt="#none"/>
-                     </a>
+                  <li class="updateLi contNews">
+                     <div class="contTop">
+                        <h3>Electronic Arts Inc.</h3>
+                        <h4>May 10. 2022</h4>
+                     </div>
+                     <div class="contDesc">
+                        <h3>
+                           EA Esports Update on Russia and Belarus
+                        </h3>
+                        <h4>
+                           We continue to be shocked at the conflict that is unfolding in Ukraine and join so many voices around the world in calling for peace and an end to the invasion. We stand in solidarity with the people of Ukraine.
+                        </h4>
+                     </div>
                   </li>
-                  <li class="no3">
-                     <a href="#none" title="news3">
-                        <img src="resource/img/index/fea1.jpg" alt="#none"/>
-                     </a>
+                  <li class="updateLi contNews">
+                     <div class="contTop">
+                        <h3>Electronic Arts Inc.</h3>
+                        <h4>May 10. 2022</h4>
+                     </div>
+                     <div class="contDesc">
+                        <h3>
+                           Working Together to #BreaktheBias
+                        </h3>
+                        <h4>
+                           A message from Laura Miele, Chief Operating Officer
+                           This year’s International Women’s Day theme is #BreakTheBias, which explores how deliberate or unconscious biases make it difficult for women to move ahead in many areas of life, including the workplace, school, and community. This theme is a call to action.
+                        </h4>
+                     </div>
                   </li>
-                  <li class="no4">
-                     <a href="#none" title="news4">
-                        <img src="resource/img/index/fea1.jpg" alt="#none"/>
-                     </a>
+                  <li class="updateLi contNews">
+                     <div class="contTop">
+                        <h3>Electronic Arts Inc.</h3>
+                        <h4>May 10. 2022</h4>
+                     </div>
+                     <div class="contDesc">
+                        <h3>
+                           Update on Electronic Arts titles in Russia and Belarus                        </h3>
+                        <h4>
+                           We continue to be shocked at the conflict that is unfolding in Ukraine, and join so many voices around the world in calling for peace and an end to the invasion. We stand in solidarity with the people of Ukraine.
+                        </h4>
+                     </div>
                   </li>
-                  <li class="no5">
-                     <a href="#none" title="news5">
-                        <img src="resource/img/index/fea1.jpg" alt="#none"/>
-                     </a>
+                  <li class="updateLi contNews">
+                     <div class="contTop">
+                        <h3>Electronic Arts Inc.</h3>
+                        <h4>May 10. 2022</h4>
+                     </div>
+                     <div class="contDesc">
+                        <h3>
+                           Remembering Coach John Madden
+                        </h3>
+                        <h4>
+                           The below announcement was shared with Electronic Arts employees by our CEO Andrew Wilson.
+                           Our dear friend John Madden passed away in late December. His passing was a tremendous loss for the American football community, for the sports world at large, and for all of us at Electronic Arts.
+                        </h4>
+                     </div>
                   </li>
-                  <!-- <li class="no6">
-                     <a href="#none" title="news6">
-                        <img src="resource/img/index/fea1_1.jpg" alt="#none"/>
-                     </a>
-                  </li>
-                  <li class="no7">
-                     <a href="#none" title="news7">
-                        <img src="resource/img/index/fea1_1.jpg" alt="#none"/>
-                     </a>
-                  </li> -->
                </ul>
             </div>
+            <div class="updateCate" id="upNFL">
+               <ul>
+                  <li class="updateLi contGameImg">
+                     <a href="#none" title="nfl1">
+                        <img src="resource/img/index/nfl1.png" alt="#none"/>
+                     </a>
+                     <div class="desc">
+                        <h3>Madden NFL 22</h3>
+                        <h4>Heavyweights Gear Set</h4>
+                        <p>May 19 - June 19</p>
+                     </div>
+                  </li>
+                  <li class="updateLi contGameImg">
+                     <a href="#none" title="nfl2">
+                        <img src="resource/img/index/nfl2.png" alt="#none"/>
+                     </a>
+                     <div class="desc">
+                        <h3>Madden NFL 22 Ultimate Team</h3>
+                        <h4>Fan Appreciation Pack</h4>
+                        <p>May 19 - June 19</p>
+                     </div>
+                  </li>
+                  <li class="updateLi contGameImg">
+                     <a href="#none" title="nfl3">
+                        <img src="resource/img/index/nfl3.png" alt="#none"/>
+                     </a>
+                     <div class="desc">
+                        <h3>Madden NFL 22 Ultimate Team</h3>
+                        <h4>NFL Draft Pack</h4>
+                        <p>May 17 - June 21</p>
+                     </div>
+                  </li>
+                  <li class="updateLi contGameImg">
+                     <a href="#none" title="nfl4">
+                        <img src="resource/img/index/nfl4.png" alt="#none"/>
+                     </a>
+                     <div class="desc">
+                        <h3>Madden NFL 22</h3>
+                        <h4>Zeus Gear Set</h4>
+                        <p>May 17 - June 29</p>
+                     </div>
+                  </li>
+                  <li class="updateLi contGameImg">
+                     <a href="#none" title="nfl5">
+                        <img src="resource/img/index/nfl5.png" alt="#none"/>
+                     </a>
+                     <div class="desc">
+                        <h3>Madden NFL 22 Ultimate Team</h3>
+                        <h4>Saint Patrick's Day Gear Set</h4>
+                        <p>May 19 - June 19</p>
+                     </div>
+                  </li>
+                  <li class="updateLi contGameImg">
+                     <a href="#none" title="nfl6">
+                        <img src="resource/img/index/nfl6.png" alt="#none"/>
+                     </a>
+                     <div class="desc">
+                        <h3>Madden NFL 22</h3>
+                        <h4>Free Agency Pack</h4>
+                        <p>May 29 - June 30</p>
+                     </div>
+                  </li>
+               </ul>
+            </div>
+            <!-- <div class="updateCate" id="upNFL">
+               <ul>
+                  <li class="updateLi contGame">
+                     <a href="#none" title="nfl1">
+                        <img src="resource/img/index/nfl1.png" alt="#none"/>
+                     </a>
+                  </li>
+                  <li class="updateLi contGame">
+                     <a href="#none" title="nfl2">
+                        <img src="resource/img/index/nfl2.png" alt="#none"/>
+                     </a>
+                  </li>
+                  <li class="updateLi contGame">
+                     <a href="#none" title="nfl3">
+                        <img src="resource/img/index/nfl3.png" alt="#none"/>
+                     </a>
+                  </li>
+                  <li class="updateLi contGame">
+                     <a href="#none" title="nfl4">
+                        <img src="resource/img/index/nfl4.png" alt="#none"/>
+                     </a>
+                  </li>
+                  <li class="updateLi contGame">
+                     <a href="#none" title="nfl5">
+                        <img src="resource/img/index/nfl5.png" alt="#none"/>
+                     </a>
+                  </li>
+                  <li class="updateLi contGame">
+                     <a href="#none" title="nfl6">
+                        <img src="resource/img/index/nfl6.png" alt="#none"/>
+                     </a>
+                  </li>
+               </ul>
+            </div> -->
          </div>
          <div id="EA">
             <div>
@@ -652,5 +814,6 @@
          </div>
       </footer>
    </div>
+ 
 </body>
 </html>
