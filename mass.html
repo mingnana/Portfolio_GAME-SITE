@@ -1,261 +1,113 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-   <meta charset="UTF-8">
-   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <title>Mass Effect™ Legendary Edition - EA Official Site</title>
-   <link href="https://fonts.googleapis.com/css2?family=Acme&display=swap" rel="stylesheet">
-   <link rel="stylesheet" href="css/footer.css">
-   <link rel="stylesheet" href="css/header.css">
-   <style type="text/css">
-    *{margin:0; padding:0;}
-    li{list-style-type:none;}
-    a:link, a:visited{text-decoration:none; color:#fff;}
-
-    #wrap{min-width:1025px; width:100%; background-color:#000; color:#fff;  font-family:  'Acme', sans-serif;}
-    #container{width:100%;}
-
-    /* 타이틀제목, 내용 공통작업 */
-    h3{font-size:38px;}
-    .desc{font-size:24px; padding:20px 0;}
-
-    /* 박스 공통작업 */
-    .box{width:158px; line-height:54px; border-radius:3px; text-align:center; border:1px solid #fff;}
-    .box a{width:100%; display:block;}
-    .box:hover{transform:scale(1.1,1.1);}
-
-    /* #################################  header / buy 버튼  ################################# */
-    #header_btn .buy{border:2px solid #c80000;}
-    #header_btn .buy a{color:#c80000;}
-    /* 메뉴 기능 */
-    #gnb li a:after{border-bottom:3px solid #c80000;}
-    /* buy기능 */
-    #header_btn .buy:hover, #header_btn .buy a:focus{width:134px; height:44px; line-height:44px;
-        border:none; background-color:#c80000;}
-    #header_btn .buy a:hover, #header_btn .buy a:focus{ color:#fff;}    
-    
-
-    /* #################################  visual  ################################# */
-    #visual{width:100%; overflow:hidden; height:1070px; }
-    #visual .back{width:100%;}
-    #visual .back img{width:100%;}
-    #visual:after{content:""; display:block; clear:both;}
-    
-    /* #############  visual / vis_inn  ############# */
-    #vis_inn{width:450px; text-align:center; position:absolute; left:10%; top:40%;}
-    #vis_inn .desc{padding-bottom: 25px; font-size:22px; color:#fff;}
-
-    /* 박스 */
-    #vis_inn .box_AR{width:100%; height:56px;}
-    #vis_inn .box_AR p{font-size:20px; border-radius:3px; float:left;}
-    #vis_inn .left{width:160px; line-height:56px; margin-left:10px; background-color:#c80000; }
-    #vis_inn .right{width:248px; height:53px ;line-height:53px; border:1px solid #fff; margin-left:20px;}
-    #vis_inn a{width:100%; display:block;}
-
-    #vis_inn .left:hover, #vis_inn .right:hover{transform:scale(1.1,1.1);}
-    #vis_inn:after{content:""; display:block; clear:both;}
-
-
-    /* #################################  feature  ################################# */
-    #feature{width:100%;
-        background-image:url("resource/img/mass/fea_back.jpg");
-        background-repeat:no-repeat;
-        background-size:100%;}
-    
-    #feature{content:""; display:block; clear:both;}
-    /* #############  feature / text_inn ############# */
-    #feature .text_AR{width:100%;}
-    #feature .text_inn{width:1025px; height:212px; padding:120px 0 80px; color:#fff; text-align:center; margin:0 auto;}
-    #feature .box{margin:0 auto;}
-
-    /* #############  feature / img_inn  ############# */
-    #feature .img_AR{width:100%; height:700px;}
-    /* 이미지 */
-    #feature .img_inn{width:1680px; height:100%; margin:0 auto;}
-    #feature .img_inn dl{width:540px; padding:0 10px; float:left;}
-    #feature .img_inn dt{width:100%; height:303px; overflow:hidden;}
-    #feature .img_inn img{width:100%; transform: scale(1); transition:transform 0.5s linear;}
-
-    /* 이미지 기능 */
-    #feature .img_inn dt:hover img{transform: scale(1.1);}
-    /* 글 */
-    #feature .img_inn dd{width:460px; height:156px; padding:0 40px; 
-        text-align:center; color:#fff; }
-    #feature .img_inn h3{font-size:24px; padding:20px 0;}
-    #feature .img_inn p{line-height:23px;}
-
-
-    /* #################################  comparison  ################################# */
-    #comparison{width:100%; height:1250px;}
-    #comparison:after{content:""; display:block; clear:both;}
-    /* #############  comparison / text_inn  ############# */
-    #comparison .text_AR{width:100%;}
-    #comparison .text_inn{width:950px; margin:0 auto; text-align:center;}
-    /* #############  comparison / img_inn  ############# */
-    #comparison .img_AR{width:100%;}
-    #comparison .img_inn{width:1700px; margin:0 auto;}
-    /* 메뉴 */
-    #comparison .menu{width:100%; height:50px; text-align:center; background:#fff;}
-    #comparison ul{width:100%; padding-left: 250px; }
-    #comparison li{width:100px; line-height:50px;
-        border-right:1px solid #ccc; float:left;}
-    #comparison li a{width:100%; display:block; color:#555;}
-    /* 기본 */
-    #comparison .select{background-color:#c80000;}
-    #comparison .select a{color:#fff;}
-
-    /* 동영상 */
-    #comparison .media{width:100%;}
-    #comparison img{width:100%;}
-    
-    /* #################################  start  ################################# */
-    #start{width:100%; position:relative;}
-    #start .img{width:100%; height:500px; overflow:hidden;}
-    #start img{width:100%; }
-    /* 텍스트 */
-    #start .text_AR{width:600px; position:absolute; right:10%; top:30%;}
-    #start .desc{font-size:20px;}
-
-    /* #################################  effect  ################################# */
-    #effect{width:100%; padding:50px 0; position:relative;}
-    #effect .img{width:100%;}
-    #effect img{width:100%;}
-    /* 텍스트 & 박스*/
-    #effect .text_AR{width:600px; position:absolute; left:5%; top:35%;}
-    #effect .box{width:228px;}
-
-    /* #################################  find  ################################# */
-    #find{width:100%; padding:50px 0;}
-    #find_inn{width:1700px; margin:0 auto;}
-    #find_inn div{width:840px; float:left;}
-    #find_left{margin-right:20px;}
-    #find .img{width:100%;}
-    #find img{width:100%;}
-
-    #find:after{content:""; display:block; clear:both;}
-    /* 텍스트 */
-    #find_inn .text_AR{width:100%; padding-top:30px; text-align:center;}
-    #find_inn .box{margin:0 auto;}
-
-    /* #################################  shop  ################################# */
-    #shop{width:100%; padding:50px 0; position:relative;}
-    #shop .img{width:100%;}
-    #shop img{width:100%;}
-    #shop .text_AR{width:600px; position:absolute; right:8%; top:35%;}
-
-    /* #################################  exp  ################################# */
-    #exp{width:100%; padding:50px 0 80px; text-align:center;}
-    #exp_inn{width:1025px; margin:0 auto;}
-    #exp_inn ul{width:100%; padding-top:50px;}
-    #exp_inn li{padding:0 20px; margin-left:20px; line-height:51px; 
-        background-color:#c80000; border-radius: 3px; display:inline-block; }
-        
-    /* #################################  buy  ################################# */
-    #buy{width:100%; overflow:hidden; position:relative;}
-    #buy .img{width:100%; height:280px; overflow:hidden;}
-    #buy img{width:100%;}
-
-    #buy .text_AR{width:1025px; position:absolute; left:23%; top:30%;}
-    #buy h3{padding-bottom: 30px; text-align:center;}
-    #buy .box{margin:0 auto;}
-    
-    /* #################################  sign Up  ################################# */
-    #signUp{width:100%;}
-    #sign_inn{width:1060px; padding:80px 0; margin:0 auto; color:#fff; }
-    #sign_inn:after{content:""; display:block; clear:both;}
-    /* 왼쪽영역 */
-    #sign_inn .left{width:520px; float:left;}
-    #sign_inn .left h2{width:100%; padding-bottom:30px; font-size:35px;}
-    #sign_inn .left p{font-size:15px;}
-    /* 오른쪽 영역 */
-    #sign_inn .right{width:490px; height:260px; margin-left:50px; float:left;}
-    #sign_inn fieldset{border:none;}
-    #sign_inn .right input, select{color:#aaa; background-color:transparent;
-        text-indent:20px; padding:10px 0;
-        border-radius:3px; border:1px solid #fff;}
-
-    #sign_inn .email{width:487px; height:38px; margin-bottom:20px;}
-    #sign_inn .email input{width:100%;}
-
-    #sign_inn .birth{width:229px; height:38px; float:left; }
-    #sign_inn .birth input{width:100%; height:18px; float:left; }
-
-    #sign_inn .select{width:229px; height:38px;  margin-left:30px; float:left;}
-    #sign_inn select{width:100%; }
-    
-    /* 체크박스 */
-    #sign_inn .check_AR{width:100%; margin:30px 0; overflow:hidden;}
-    #sign_inn .check{width:18px; height:18px; float:left;}
-    #sign_inn .right .desc{width:472px; margin-left:18px; height:80px; line-height:20px;
-        font-size:13px; display:block; color:#fff; padding:0;}
-    #sign_inn b{color:#c80000;}
-    /* 사인 박스 */
-    #sign_inn .box{width:136px; height:50px; line-height:50px; text-align:center; 
-        background-color:#c80000; border:none; border-radius:3px;}
-    #sign_inn .box a{display:block; color:#f3f3f3;}
-    #sign_inn .box:hover{padding:3px;}
-
-   </style>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mass Effect™ Legendary Edition - EA Official Site</title>
+    <link href="https://fonts.googleapis.com/css2?family=Acme&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/mass.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="./libs/jquery-3.5.1.min.js"></script>
+    <script src="js/mass.js"></script>
 </head>
+
 <body>
     <div id="wrap">
         <header id="header">
             <div id="header_inn">
                 <h1>
-                    <a href="https://www.ea.com/" title="메인"> 
-                        <img src="resource/img/index/fea1_logo.svg" alt="로고"/>
+                    <a href="https://www.ea.com/" title="메인">
+                        <img src="resource/img/index/fea1_logo.svg" alt="로고" />
                     </a>
                 </h1>
                 <div id="gnb">
                     <ul>
                         <li class="gnb_overview">
-                        <a href="#" title="Overview">Overview</a>
-                        <!-- <ul>
-                            <li class="title">
-                                <a href="#" title="Story">Story</a>
-                            </li>
-                            <li><a href="#" title="Characters">Characters</a></li>
-                            <li><a href="#" title="Gameplay Overview">Gameplay Overview</a></li>
-                            <li><a href="#" title="PC System Requirements">PC System Requirements</a></li>
-                            <li><a href="#" title="Cards System">Cards System</a></li>
-                        </ul> -->
+                            <a href="#none" title="Overview">Overview</a>
                         </li>
                         <li class="gnb_Community Hub">
-                        <a href="#" title="Community Hub">Community Hub</a>
+                            <a href="#none" title="Community Hub">Community Hub</a>
                         </li>
                         <li class="gnb_media">
-                        <a href="#" title="Media">Media</a>
+                            <a href="#none" title="Media">Media</a>
                         </li>
                         <li class="gnb_News">
-                        <a href="#" title="News">News</a>
+                            <a href="#none" title="News">News</a>
                         </li>
                     </ul>
                 </div>
                 <div id="header_btn">
                     <div class="buy">
-                       <p>
-                          <a href="#" title="Buy">Join us?</a>
-                       </p>
+                        <p>
+                            <a href="#none" title="Buy">Join us?</a>
+                        </p>
                     </div>
                     <div class="lang">
-                        <p class="img">
-                            <a href="#" title="언어">
-                                <img src="resource/img/index/header_language.svg" alt="언어설정"/>
-                            </a>
-                        </p>
-                        <p class="text">
-                            <a href="#" title="언어변경">ENG</a>
-                        </p>
+                        <a href="./index_kor.html" title="언어변경">
+                            <span class="img">
+                                <img src="resource/img/index/header_language.svg" alt="언어설정">
+                            </span>
+                            <span class="text">
+                                <span>ENG</a>
+                        </span>
+                        </a>
                     </div>
                     <div class="menu_bar">
-                        <p></p>
-                        <p></p>
-                        <p></p>
+                        <span></span>
+                        <span></span>
+                        <span></span>
                     </div>
                 </div>
             </div>
         </header>
+        <div id="all_menu_box">
+            <div id="all_menu_inn">
+                <div class="all_menu_gnb">
+                    <ul class="gnb_ul">
+                        <li class="title">
+                            <a href="#none" class="sTitle">Featured Games</a>
+                            <ul>
+                                <li><a href="./mass.html" title="Mass effect">Mass effect</a></li>
+                                <li><a href="./lost_in_Random.html" title="lost in Random">lost in Random</a></li>
+                                <li><a href="./nhl.html" title="NHL22">NHL22</a></li>
+                                <li><a href="./it_takes_two.html" title="It takes two">It takes two</a></li>
+                            </ul>
+                        </li>
+                        <li class="title">
+                            <a href="#none" class="sTitle">Games</a>
+                            <ul>
+                                <li><a href="#none" title=" Latest Game"> Latest Game</a></li>
+                                <li><a href="#none" title="Coming Soon">Coming Soon</a></li>
+                                <li><a href="#none" title="EA SPORTS">EA SPORTS</a></li>
+                                <li><a href="#none" title="free-To-Play">free-To-Play</a></li>
+                            </ul>
+                        </li>
+                        <li class="title">
+                            <a href="#none" class="sTitle">More Experiences</a>
+                            <ul>
+                                <li><a href="#none" title="EA Play">EA Play</a></li>
+                                <li><a href="#none" title="Origin">Origin</a></li>
+                                <li><a href="#none" title="Competitive Gaming">Competitive Gaming</a></li>
+                                <li><a href="#none" title="EA Play Live">EA Play Live</a></li>
+                            </ul>
+                        </li>
+                        <li class="title">
+                            <a href="#none" class="sTitle">About</a>
+                            <ul>
+                                <li><a href="#none" title="company">company</a></li>
+                                <li><a href="#none" title="EA Studio">EA Studio</a></li>
+                                <li><a href="#none" title="Our Technology">Our Technology</a></li>
+                                <li><a href="#none" title="EA Patners">EA Patners</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
         <div id="container">
             <div id="mass">
                 <div id="visual">
@@ -264,17 +116,17 @@
                     </p>
                     <div id="vis_inn">
                         <h2>
-                            <img src="resource/img/mass/visual_logo.svg" alt="로고"/>
+                            <img src="resource/img/mass/visual_logo.svg" alt="로고" />
                         </h2>
                         <p class="desc">
                             Relive the complete cinematic saga today
                         </p>
                         <div class="box_AR">
                             <p class="left">
-                                <a href="#" title="Buy Now">Buy Now</a>
+                                <a href="#none" title="Buy Now">Buy Now</a>
                             </p>
                             <p class="right">
-                                <a href="#" title="Watch Launch Trailer">Watch Launch Trailer ▷</a>
+                                <a href="#none" title="Watch Launch Trailer">Watch Launch Trailer ▷</a>
                             </p>
                         </div>
                     </div>
@@ -283,9 +135,10 @@
                     <div class="text_AR">
                         <div class="text_inn">
                             <h3>SHEPARD RETURNS IN 4K ULTRA HD</h3>
-                            <p class="desc">Take command of the Normandy, assemble your crew, and prepare for an unforgettable adventure in the highly acclaimed series.</p>
+                            <p class="desc">Take command of the Normandy, assemble your crew, and prepare for an
+                                unforgettable adventure in the highly acclaimed series.</p>
                             <p class="box">
-                                <a href="#" title="Explore Features">
+                                <a href="#none" title="Explore Features">
                                     Explore Features
                                 </a>
                             </p>
@@ -295,29 +148,36 @@
                         <div class="img_inn">
                             <dl>
                                 <dt>
-                                    <img src="resource/img/mass/fea0.jpg" alt="Relive the Cinematic Saga"/>
+                                    <img src="resource/img/mass/fea0.jpg" alt="Relive the Cinematic Saga" />
                                 </dt>
                                 <dd>
                                     <h3>Relive the Cinematic Saga</h3>
-                                    <p>The Mass Effect™ Legendary Edition includes single-player base content and over 40 DLC from the highly acclaimed Mass Effect, Mass Effect 2, and Mass Effect 3 games, including promo weapons, armors, and packs – remastered and optimized for 4K Ultra HD.</p>
+                                    <p>The Mass Effect™ Legendary Edition includes single-player base content and over
+                                        40 DLC from the highly acclaimed Mass Effect, Mass Effect 2, and Mass Effect 3
+                                        games, including promo weapons, armors, and packs – remastered and optimized for
+                                        4K Ultra HD.</p>
                                 </dd>
                             </dl>
                             <dl>
                                 <dt>
-                                    <img src="resource/img/mass/fea1.jpg" alt="Reflect On Your Choices"/>
+                                    <img src="resource/img/mass/fea1.jpg" alt="Reflect On Your Choices" />
                                 </dt>
                                 <dd>
                                     <h3>Reflect On Your Choices</h3>
-                                    <p>Your choices seamlessly travel from one game to the next. Each decision you make will control the outcome of every mission, every relationship, every battle – and even the fate of the galaxy itself.</p>
+                                    <p>Your choices seamlessly travel from one game to the next. Each decision you make
+                                        will control the outcome of every mission, every relationship, every battle –
+                                        and even the fate of the galaxy itself.</p>
                                 </dd>
                             </dl>
                             <dl>
                                 <dt>
-                                    <img src="resource/img/mass/fea2.jpg" alt="Experience the Legend of Shepard"/>
+                                    <img src="resource/img/mass/fea2.jpg" alt="Experience the Legend of Shepard" />
                                 </dt>
                                 <dd>
                                     <h3>Experience the Legend of Shepard</h3>
-                                    <p>Create and customize your own character, from appearance and skills to a personalized arsenal then lead your elite recon squad across a galaxy in turmoil.</p>
+                                    <p>Create and customize your own character, from appearance and skills to a
+                                        personalized arsenal then lead your elite recon squad across a galaxy in
+                                        turmoil.</p>
                                 </dd>
                             </dl>
                         </div>
@@ -327,18 +187,19 @@
                     <div class="text_AR">
                         <div class="text_inn">
                             <h3>REMASTERED AND OPTIMIZED FOR 4K ULTRA HD</h3>
-                            <p class="desc">Relive the cinematic saga in stunning 4K with enhanced visuals, textures and models. Including modern graphic improvements, updated UI, and more.</p>
+                            <p class="desc">Relive the cinematic saga in stunning 4K with enhanced visuals, textures and
+                                models. Including modern graphic improvements, updated UI, and more.</p>
                         </div>
                     </div>
                     <div class="img_AR">
                         <div class="img_inn">
                             <div class="menu">
                                 <ul>
-                                    <li class="select"><a href="#" title="Video 1">Video 1</a></li>
-                                    <li><a href="#" title="Image 1">Image 1</a></li>
-                                    <li><a href="#" title="Video 2">Video 2</a></li>
-                                    <li><a href="#" title="Image 2">Image 2</a></li>
-                                    <li><a href="#" title="Image 3">Image 3</a></li>
+                                    <li class="select"><a href="#none" title="Video 1">Video 1</a></li>
+                                    <li><a href="#none" title="Image 1">Image 1</a></li>
+                                    <li><a href="#none" title="Video 2">Video 2</a></li>
+                                    <li><a href="#none" title="Image 2">Image 2</a></li>
+                                    <li><a href="#none" title="Image 3">Image 3</a></li>
                                 </ul>
                             </div>
                             <div class="media">
@@ -351,27 +212,29 @@
                 </div>
                 <div id="start">
                     <p class="img">
-                        <img src="resource/img/mass/start.gif" alt="start"/>
+                        <img src="resource/img/mass/start.gif" alt="start" />
                     </p>
                     <div class="text_AR">
                         <h3>CUSTOM ART CREATOR</h3>
                         <p class="desc">
-                            Make the Mass Effect Legendary Edition cover art your own. Feature your favorite characters and romances, show your true Paragon or Renegade colors, and more.
+                            Make the Mass Effect Legendary Edition cover art your own. Feature your favorite characters
+                            and romances, show your true Paragon or Renegade colors, and more.
                         </p>
                         <p class="box">
-                            <a href="#" title="Get Started">Get Started</a>
+                            <a href="#none" title="Get Started">Get Started</a>
                         </p>
                     </div>
                 </div>
                 <div id="effect">
                     <p class="img">
-                        <img src="resource/img/mass/effect.jpg" alt="effect"/>
+                        <img src="resource/img/mass/effect.jpg" alt="effect" />
                     </p>
                     <div class="text_AR">
                         <h3>THE MASS EFFECT UNIVERSE</h3>
-                        <p class="desc">New to the Mass Effect trilogy? Learn about the history of the series, the incredible characters you'll meet, and more.</p>
+                        <p class="desc">New to the Mass Effect trilogy? Learn about the history of the series, the
+                            incredible characters you'll meet, and more.</p>
                         <p class="box">
-                            <a href="#" title="Learn About Mass Effect">Learn About Mass Effect</a>
+                            <a href="#none" title="Learn About Mass Effect">Learn About Mass Effect</a>
                         </p>
                     </div>
                 </div>
@@ -379,13 +242,14 @@
                     <div id="find_inn">
                         <div id="find_left">
                             <p class="img">
-                                <img src="resource/img/mass/find0.jpg" alt="visual changes"/>
+                                <img src="resource/img/mass/find0.jpg" alt="visual changes" />
                             </p>
                             <div class="text_AR">
                                 <h3>VISUAL IMPROVEMENTS BLOG</h3>
-                                <p class="desc">Learn more about the visual changes &amp; improvements coming to the Legendary Edition!</p>
+                                <p class="desc">Learn more about the visual changes &amp; improvements coming to the
+                                    Legendary Edition!</p>
                                 <p class="box">
-                                    <a href="#" title="Find Out More">
+                                    <a href="#none" title="Find Out More">
                                         Find Out More
                                     </a>
                                 </p>
@@ -393,13 +257,14 @@
                         </div>
                         <div id="find_right">
                             <p class="img">
-                                <img src="resource/img/mass/find1.jpg" alt="by fans, for fans"/>
+                                <img src="resource/img/mass/find1.jpg" alt="by fans, for fans" />
                             </p>
                             <div class="text_AR">
                                 <h3>by fans, for fans</h3>
-                                <p class="desc">Has the Mass Effect series inspired you? Share your favorite creations for a chance to be featured here and on our social channels.</p>
+                                <p class="desc">Has the Mass Effect series inspired you? Share your favorite creations
+                                    for a chance to be featured here and on our social channels.</p>
                                 <p class="box">
-                                    <a href="#" title="Find Out More">
+                                    <a href="#none" title="Find Out More">
                                         Find Out More
                                     </a>
                                 </p>
@@ -409,7 +274,7 @@
                 </div>
                 <div id="shop">
                     <p class="img">
-                        <img src="resource/img/mass/shop.jpg" alt="shop"/>
+                        <img src="resource/img/mass/shop.jpg" alt="shop" />
                     </p>
                     <div class="text_AR">
                         <h3>THE BIOWARE GEAR STORE</h3>
@@ -421,164 +286,173 @@
                     <div id="exp_inn">
                         <h3>EXPLORE THE MASS EFFECT LEGENDARY EDITION</h3>
                         <ul>
-                            <li><a href="#" title="Game Overview">Game Overview</a></li>
-                            <li><a href="#" title="The Mass Effect Universe">The Mass Effect Universe</a></li>
-                            <li><a href="#" title="Community">Community</a></li>
-                            <li><a href="#" title="Media">Media</a></li>
-                            <li><a href="#" title="Custom Art Creator">Custom Art Creator</a></li>
+                            <li><a href="#none" title="Game Overview">Game Overview</a></li>
+                            <li><a href="#none" title="The Mass Effect Universe">The Mass Effect Universe</a></li>
+                            <li><a href="#none" title="Community">Community</a></li>
+                            <li><a href="#none" title="Media">Media</a></li>
+                            <li><a href="#none" title="Custom Art Creator">Custom Art Creator</a></li>
                         </ul>
                     </div>
                 </div>
                 <div id="buy">
                     <p class="img">
-                        <img src="resource/img/mass/buy.jpg" alt="buy"/>
+                        <img src="resource/img/mass/buy.jpg" alt="buy" />
                     </p>
                     <div class="text_AR">
                         <h3>RELIVE THE LEGEND OF COMMANDER SHEPARD</h3>
                         <p class="box">
-                            <a href="#">Buy Now</a>
+                            <a href="#none">Buy Now</a>
                         </p>
                     </div>
                 </div>
                 <div id="signUp">
-                   <div id="sign_inn">
-                      <div class="left">
-                         <h2>Stay up to date with Lost in Random™</h2>
-                         <p>Sign up today to receive the latest Lost in Random news, updates, behind-the-scenes content, exclusive offers, and more (including other EA news, products, events, and promotions) by email.</p>
-                      </div>
-                      <div class="right">
-                         <form action="#" method="post">
-                            <fieldset>
-                                <p class="email">
-                                   <input type="email" id="usermail" name="useremail" placeholder="example@gmail.com"/>
+                    <div id="sign_inn">
+                        <div class="left">
+                            <h2>Stay up to date with Lost in Random™</h2>
+                            <p>Sign up today to receive the latest Lost in Random news, updates, behind-the-scenes
+                                content, exclusive offers, and more (including other EA news, products, events, and
+                                promotions) by email.</p>
+                        </div>
+                        <div class="right">
+                            <form action="#none" method="post">
+                                <fieldset>
+                                    <p class="email">
+                                        <input type="email" id="usermail" name="useremail"
+                                            placeholder="example@gmail.com" />
+                                    </p>
+                                    <p class="birth">
+                                        <input type="datetime" id="userbirth" name="userbirth"
+                                            placeholder="1900-00-00" />
+                                    </p>
+                                    <p class="select">
+                                        <select>
+                                            <option value="United States">United States</option>
+                                            <option value="Argentina">Argentina</option>
+                                            <option value="Australia">Australia</option>
+                                            <option value="Austria">Austria</option>
+                                            <option value="Belgium">Belgium</option>
+                                            <option value="Brazil">Brazil</option>
+                                            <option value="Canada">Canada</option>
+                                            <option value="Chile">Chile</option>
+                                            <option value="China">China</option>
+                                            <option value="Colombia">Colombia</option>
+                                            <option value="Czech Republic">Czech Republic</option>
+                                            <option value="Denmark">Denmark</option>
+                                            <option value="Finland">Finland</option>
+                                        </select>
+                                    </p>
+                                </fieldset>
+                            </form>
+                            <div class="check_AR">
+                                <p class="checkbox">
+                                    <input type="checkbox" id="checkbox" name="checkbox" />
+                                    <label for="checkbox">I can unsubscribe at any time by changing my <b>email
+                                            preferences</b>, contacting <b>privacyadmin.ea.com</b>, or writing to
+                                        Electronic Arts Inc., ATTN: Email Opt-Out, 209 Redwood Shores Pkwy, Redwood
+                                        City, CA, 94065, USA.</label>
                                 </p>
-                                <p class="birth">
-                                   <input type="datetime" id="userbirth" name="userbirth" placeholder="1900-00-00"/>
-                                </p>
-                               <p class="select">
-                                  <select>
-                                     <option value="United States">United States</option>
-                                     <option value="Argentina">Argentina</option>
-                                     <option value="Australia">Australia</option>
-                                     <option value="Austria">Austria</option>
-                                     <option value="Belgium">Belgium</option>
-                                     <option value="Brazil">Brazil</option>
-                                     <option value="Canada">Canada</option>
-                                     <option value="Chile">Chile</option>
-                                     <option value="China">China</option>
-                                     <option value="Colombia">Colombia</option>
-                                     <option value="Czech Republic">Czech Republic</option>
-                                     <option value="Denmark">Denmark</option>
-                                     <option value="Finland">Finland</option>
-                                  </select>
-                               </p>
-                            </fieldset>
-                         </form>
-                         <div class="check_AR">
-                            <p class="checkbox">
-                               <input type="checkbox" id="checkbox" name="checkbox"/>
-                               <label for="checkbox">I can unsubscribe at any time by changing my <b>email preferences</b>, contacting <b>privacyadmin.ea.com</b>, or writing to Electronic Arts Inc., ATTN: Email Opt-Out, 209 Redwood Shores Pkwy, Redwood City, CA, 94065, USA.</label>
+                            </div>
+                            <p class="box">
+                                <a href="#none" title="signUp">sign Up</a>
                             </p>
-                         </div>
-                         <p class="box">
-                            <a href="#" title="signUp">sign Up</a>
-                         </p>
-                      </div>
-                   </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
         <footer id="footer">
-           <!-- <div id="footer_info">
+            <!-- <div id="footer_info">
            </div> -->
-           <div id="footer_inn">
-              <div class="gnb">
-                 <ul>
-                    <li><a href="#" title="Game Library">Game Library</a></li>
-                    <li><a href="#" title="Subscribe">Subscribe</a></li>
-                    <li><a href="#" title="Redeem Code">Redeem Code</a></li>
-                    <li><a href="#" title="Origin">Origin</a></li>
-                    <li><a href="#" title="About">About</a></li>
-                    <li><a href="#" title="Accessibility">Accessibility</a></li>
-                    <li><a href="#" title="Help">Help</a></li>
-                 </ul>
-              </div>
-              <div class="footer_bottom">
-                 <p class="logo">
-                    <img src="resource/img/index/ea_logo_icon.png" alt="ea 로고">
-                 </p>
-                 <div class="infoArea">
+            <div id="footer_inn">
+                <div class="gnb">
                     <ul>
-                       <li><a href="#" title="Legal">Legal</a></li>
-                       <li><a href="#" title="User Agreement">User Agreement</a></li>
-                       <li><a href="#" title="Privacy &amp; Cookie Policy (Your Privacy Rights">Privacy &amp; Cookie Policy (Your Privacy Rights)</a></li>
-                       <li><a href="#" title="Online Service Updates">Online Service Updates</a></li>
-                       <li><a href="#" title="Security">Security</a></li>
-                       <li><a href="#" title="YouTube Terms of Service">YouTube Terms of Service</a></li>
+                        <li><a href="#none" title="Game Library">Game Library</a></li>
+                        <li><a href="#none" title="Subscribe">Subscribe</a></li>
+                        <li><a href="#none" title="Redeem Code">Redeem Code</a></li>
+                        <li><a href="#none" title="Origin">Origin</a></li>
+                        <li><a href="#none" title="About">About</a></li>
+                        <li><a href="#none" title="Accessibility">Accessibility</a></li>
+                        <li><a href="#none" title="Help">Help</a></li>
                     </ul>
-                    <p class="policy">
-                       <a href="#" title="Google Privacy Policy">Google Privacy Policy</a>
+                </div>
+                <div class="footer_bottom">
+                    <p class="logo">
+                        <img src="resource/img/index/ea_logo_icon.png" alt="ea 로고">
                     </p>
-                    <p class="copy">
-                       <a href="#" title="© 2022 Electronic Arts Inc.">&copy; 2022 Electronic Arts Inc.</a>
-                    </p>
-                 </div>
-                 <div class="siteArea">
-                    <div class="select">
-                       <select>
-                          <option value="Family Site">Family Site</option>
-                          <option value="Argentina">Argentina</option>
-                          <option value="Australia">Australia</option>
-                          <option value="Austria">Austria</option>
-                          <option value="Belgium">Belgium</option>
-                          <option value="Brazil">Brazil</option>
-                          <option value="Canada">Canada</option>
-                       </select>
+                    <div class="infoArea">
+                        <ul>
+                            <li><a href="#none" title="Legal">Legal</a></li>
+                            <li><a href="#none" title="User Agreement">User Agreement</a></li>
+                            <li><a href="#none" title="Privacy &amp; Cookie Policy (Your Privacy Rights">Privacy &amp;
+                                    Cookie Policy (Your Privacy Rights)</a></li>
+                            <li><a href="#none" title="Online Service Updates">Online Service Updates</a></li>
+                            <li><a href="#none" title="Security">Security</a></li>
+                            <li><a href="#none" title="YouTube Terms of Service">YouTube Terms of Service</a></li>
+                        </ul>
+                        <p class="policy">
+                            <a href="#none" title="Google Privacy Policy">Google Privacy Policy</a>
+                        </p>
+                        <p class="copy">
+                            <a href="#none" title="© 2022 Electronic Arts Inc.">&copy; 2022 Electronic Arts Inc.</a>
+                        </p>
                     </div>
-                    <div class="sns">
-                       <ul>
-                          <li>
-                             <a href="#" title="페이스북">
-                                <img src="resource/img/index/sns_fb.svg" alt="페이스북"/>
-                             </a>
-                          </li>
-                          <li>
-                             <a href="#" title="링크드인">
-                                <img src="resource/img/index/sns_in.svg" alt="링크드인"/>
-                             </a>
-                          </li>
-                          <li>
-                             <a href="#" title="인스타">
-                                <img src="resource/img/index/sns_ins.svg" alt="인스타"/>
-                             </a>
-                          </li>
-                          <li>
-                             <a href="#" title="유튜브">
-                                <img src="resource/img/index/sns_yt.svg" alt="유튜브"/>
-                             </a>
-                          </li>
-                          <li>
-                             <a href="#" title="트위터">
-                                <img src="resource/img/index/sns_tw.svg" alt="트위터"/>
-                             </a>
-                          </li>
-                       </ul>
+                    <div class="siteArea">
+                        <div class="select">
+                            <select>
+                                <option value="Family Site">Family Site</option>
+                                <option value="Argentina">Argentina</option>
+                                <option value="Australia">Australia</option>
+                                <option value="Austria">Austria</option>
+                                <option value="Belgium">Belgium</option>
+                                <option value="Brazil">Brazil</option>
+                                <option value="Canada">Canada</option>
+                            </select>
+                        </div>
+                        <div class="sns">
+                            <ul>
+                                <li>
+                                    <a href="#none" title="페이스북">
+                                        <img src="resource/img/index/sns_fb.svg" alt="페이스북" />
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#none" title="링크드인">
+                                        <img src="resource/img/index/sns_in.svg" alt="링크드인" />
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#none" title="인스타">
+                                        <img src="resource/img/index/sns_ins.svg" alt="인스타" />
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#none" title="유튜브">
+                                        <img src="resource/img/index/sns_yt.svg" alt="유튜브" />
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#none" title="트위터">
+                                        <img src="resource/img/index/sns_tw.svg" alt="트위터" />
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
                     </div>
-                 </div>
-                 <div class="info">
-                    <ul>
-                       <li><a href="#" title="Impact Report">Impact Report</a></li>
-                       <li><a href="#" title="Executives">Executives</a></li>
-                       <li><a href="#" title="Privacy & Security">Privacy & Security</a></li>
-                       <li><a href="#" title="Political Activities">Political Activities</a></li>
-                       <li><a href="#" title="Global Human Rights Statement">Global Human Rights Statement</a></li>
-                       <li><a href="#" title="Partner With Us">Partner With Us</a></li>
-                    </ul>
-                 </div>
-              </div>
-           </div>
+                    <div class="info">
+                        <ul>
+                            <li><a href="#none" title="Impact Report">Impact Report</a></li>
+                            <li><a href="#none" title="Executives">Executives</a></li>
+                            <li><a href="#none" title="Privacy & Security">Privacy & Security</a></li>
+                            <li><a href="#none" title="Political Activities">Political Activities</a></li>
+                            <li><a href="#none" title="Global Human Rights Statement">Global Human Rights Statement</a>
+                            </li>
+                            <li><a href="#none" title="Partner With Us">Partner With Us</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
         </footer>
     </div>
 </body>
-</html>
 
+</html>

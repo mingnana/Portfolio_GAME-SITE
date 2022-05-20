@@ -1,219 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
    <meta charset="UTF-8">
    <meta http-equiv="X-UA-Compatible" content="IE=edge">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <title>Discover It Takes Two, the next EA Originals title from Hazelight.</title>
-   <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&family=Playfair+Display:wght@700&family=Ramaraja&display=swap" rel="stylesheet">
+   <link
+      href="https://fonts.googleapis.com/css2?family=Permanent+Marker&family=Playfair+Display:wght@700&family=Ramaraja&display=swap"
+      rel="stylesheet">
    <link href="https://fonts.googleapis.com/css2?family=Acme&display=swap" rel="stylesheet">
+   <link rel="stylesheet" href="css/reset.css">
    <link rel="stylesheet" href="css/footer.css">
    <link rel="stylesheet" href="css/header.css">
-   <style type="text/css">
-      *{margin:0; padding:0;}
-      li{list-style-type:none;}
-      a:link, a:visited{text-decoration:none; color:#000;}
-
-      #wrap{min-width:1025px; width:100%;  font-family: 'Acme', sans-serif;}
-      #container{width:100%; font-family:  'Playfair Display', serif;}
-
-      /* 박스 공통작업 */
-      .box{width:170px; height:50px; line-height:50px;  
-      margin:0 auto; border-radius:3px; font-size:16px;}
-      .box:hover{transform:scale(1.1,1.1);}
-
-   /* #################################  header / buy 버튼  ################################# */
-      #header_btn .buy{border:2px solid #ff8337;}
-      #header_btn .buy a{color:#ff8337;}
-      /* 메뉴 기능 */
-      #gnb li a:after{border-bottom:3px solid #ff8337;}
-      /* buy기능 */
-      #header_btn .buy:hover, #header_btn .buy a:focus{width:134px; height:44px; line-height:44px;
-         border:none; background-color:#ff8337; color:#fff;}
-      #header_btn .buy:hover a, #header_btn .buy:focus{color:#fff;}    
-
-      /* #################################  visual  ################################# */
-      #cont_inn{width:100%;}
-      #visual{width:100%; height:1080px;}
-      #visual .back{width:100%;}
-      #visual .side{width:90%; position:absolute; left:5%; top:5%;
-         animation: side 5s infinite alternate;}
-      #visual .side img{width:100%}
-      #visual:after{content:""; display:block; clear:both;}
-      /* side 기능 */
-      @keyframes side{
-         0%{top:4%}
-         20%{top:5%}
-         40%{top:4%}
-         60%{top:5%}
-         100%{top:4%}
-         
-      }
-      /* 텍스트내용 */
-      #vis_inn{width:700px; height:195px; overflow:hidden; text-align:center;
-         position:absolute; left:33%; top:92%;}
-      #vis_inn h2{width:700px; padding:30px 0;
-         color:#f3f3f3; font-size:18px; font-weight:700; text-align:center;} 
-      /* 박스 공통작업 */
-      #vis_inn p{width:198px; line-height:56px; transform:scale(1);
-         border-radius:3px; text-align:center; float:left;}
-      #vis_inn p:hover{transform:scale(1.1);}
-      /* 왼쪽박스 */
-      #vis_inn .box{background-color:#ff8337; position:absolute; left:35%;}
-      #vis_inn .box a{color:#f3f3f3;}
-
-      /* #################################  contents  ################################# */
-      #contents{width:100%; 
-      background-image:url("resource/img/two/cont_back.jpg");
-      background-size:100% 100%;
-      background-repeat:no-repeat;
-      background-attachment: fixed;
-      text-align:center;}
-      #contents:after{content:""; display:block; clear:both;}
-
-      /* 타이틀 공통작업 */
-      h4{font-size:40px; padding:25px 0; color:#fff;}
-      
-      /* #############  contents / discover of Random  ############# */
-      #discover{width:100%;}
-      #discover_inn{width:860px; height:206px; padding:100px 0 120px; margin:0 auto; color:#fff;}
-      #discover_inn .desc{padding:30px 0; line-height:32px; font-size:24px;}
-
-      /* Discover 박스 */
-      #discover_inn .box a{display:block; background-color:#ff8337; border-radius:3px;}
-      #discover_inn:after{content:""; display:block; clear:both;}
-
-      
-      /* #################################  feature  ################################# */
-      #feature{width:100%;}
-      #feature{content:""; display:block; clear:both;}
-
-      /* #############  feature / img_AR  ############# */
-      #feature .img_AR{width:100%; height:900px;}
-      #feature .img_inn{width:1500px; height:737px; margin:0 auto;}
-      /* 이미지 */
-      #feature .img_inn .img{width:552px; height:100%; float:left;}
-      #feature .img_inn img{width:100%; height:100%;}
-      /* 글 */
-      #feature .img_inn .text{width:748px; margin-left:200px; color:#fff; float:left;}
-      #feature .img_inn h2{font-size:50px;}
-      #feature .img_inn .text p{font-size:25px; margin:25px 0 40px; text-align:justify;}
-
-
-      /* #############  feature / scroll_AR  ############# */
-      #feature .scroll_AR{width:100% }
-      #feature .scroll_inn{width:1500px; margin:0 auto;}
-      #feature .scroll_inn ul{width:0%;}
-      #feature .scroll_inn li{width:1488px; position:relative;}
-      #feature .scroll_inn li .img{width:800px; display:block;}
-      #feature .scroll_inn li img{width:100%;}
-      #feature .scroll_inn .text_AR{width:960px; color:#fff; font-weight:700;
-         position:absolute; left:38%; top:15%; text-align:left;}
-         #feature .scroll_inn .text{font-size:45px;}
-         #feature .scroll_inn .person{font-size:25px; line-height:100px;}
-         
-      /* #############  collection  ############# */
-      #collection .collection{width:100%;}
-      #collection .col_inn{width:1500px; height:2500px; margin:0px auto; padding-top:300px; position:relative;}
-      #collection .col_inn img{width:100%; box-shadow: 4px 4px 20px #000;}
-      #collection .col0{width:744px; position:relative; left:5%;}
-      #collection .col1{width:767px; position:absolute; left:44%; top:25%;}
-      #collection .col2{width:494px; position:absolute; left:27%; top:38%;}
-      #collection .col3{width:552px; position:absolute; left:52%; top:47%;}
-      #collection .col4{width:513px; position:absolute; left:24%; top:57%;}
-      #collection .col5{width:590px; position:absolute; left:5%; top:66%;}
-      #collection .col6{width:767px; position:absolute; left:40%; top:76%;}
-      
-      #collection .col_inn:after{content:""; display:block; clear:both;}
-
-      /* ############## friend  ############# */
-      #friend{width:100%; position:relative; }
-      #friend .img{width:100%; height:434px;}
-      #friend img{width:100%; height:100%;}
-      /* 텍스트 */
-      #friend .text_AR{width:400px; position:absolute; left:25%; top:30%; color:#fff; text-align:left;}
-      #friend .text_AR h3{font-size:54px;}
-      #friend .desc{font-size:20px; padding:15px 0;}
-      #friend .box{border:1px solid #fff; margin:0; text-align:center;}
-      #friend .box a{color:#fff;}
-      #friend:after{content:""; display:block; clear:both;}
-
-
-      /* #############  watch the trailer  ############# */
-      #trailer{width:100%; padding-top:100px;}
-      #tra_inn{width:1500px; margin:0 auto;}
-      #tra_inn p{width:100%;}
-      #tra_inn img{width:100%;}
-
-      /* #############  contact  ############# */
-      #contact{width:100%; background-color:#ff8337; margin:30px 0;}
-      #contact .contact_inn{width:1100px; height:112px; line-height:112px; margin:0 auto;}
-      #contact .contact_inn .text{width:700px; font-size:26px; font-weight:700;float:left; }
-      #contact .contact_inn .box{width:170px; margin-left:226px; margin-top:30px; 
-         border:2px solid #000; float:left; font-weight:700;}
-      #contact:after{content:""; display:block; clear:both;}
-
-
-      /* #############  sign Up  ############# */
-      #signUp{width:100%;}
-      #sign_inn{width:1060px; padding:80px 0; margin:0 auto; color:#fff; }
-      #sign_inn:after{content:""; display:block; clear:both;}
-      /* 왼쪽영역 */
-      #sign_inn .left{width:520px; float:left;  text-align:left;}
-      #sign_inn .left h2{width:100%; padding-bottom:30px; font-size:35px;}
-      #sign_inn .left p{font-size:15px;}
-      /* 오른쪽 영역 */
-      #sign_inn .right{width:490px; height:260px; margin-left:50px; float:left;}
-      #sign_inn fieldset{border:none;}
-      #sign_inn .right input, select{color:#aaa; background-color:transparent;
-         text-indent:20px; padding:10px 0;
-         border-radius:3px; border:1px solid #fff;}
-
-      #sign_inn .email{width:487px; height:38px; margin-bottom:20px;}
-      #sign_inn .email input{width:100%;}
-
-      #sign_inn .birth{width:229px; height:38px; float:left; }
-      #sign_inn .birth input{width:100%; height:18px; float:left; }
-
-      #sign_inn .select{width:229px; height:38px;  margin-left:30px; float:left;}
-      #sign_inn select{width:100%; }
-      
-
-      /* 체크박스 */
-      #sign_inn .check_AR{width:100%; margin:30px 0; text-align:left;}
-      /* #sign_inn .checkbox label{} */
-      #sign_inn .right .desc{width:472px; margin-left:20px; height:80px; line-height:20px;
-          font-size:13px; display:block; color:#fff;}
-      #sign_inn b{color:#ff8337;}
-      /* 사인 박스 */
-      #sign_inn .box{width:136px; height:50px; line-height:50px; text-align:center; 
-         background-color:#ff8337; border-radius:3px; margin:0;}
-      #sign_inn .box a{display:block; color:#f3f3f3;}
-
-   </style>
+   <link rel="stylesheet" href="css/two.css">
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+   <script src="./libs/jquery-3.5.1.min.js"></script>
+   <script src="js/two.js"></script>
 </head>
+
 <body>
    <div id="wrap">
       <header id="header">
          <div id="header_inn">
             <h1>
-               <a href="https://www.ea.com/" title="메인"> 
-                  <img src="resource/img/index/fea4_logo(2).png" alt="로고"/>
+               <a href="https://www.ea.com/" title="메인">
+                  <img src="resource/img/two/logo.png" alt="로고" />
                </a>
             </h1>
             <nav id="gnb">
                <ul>
                   <li class="gnb_overview">
                      <a href="#" title="Overview">Overview</a>
-                     <!-- <ul>
-                        <li class="title">
-                           <a href="#" title="Story">Story</a>
-                        </li>
-                        <li><a href="#" title="Characters">Characters</a></li>
-                        <li><a href="#" title="Gameplay Overview">Gameplay Overview</a></li>
-                        <li><a href="#" title="PC System Requirements">PC System Requirements</a></li>
-                        <li><a href="#" title="Cards System">Cards System</a></li>
-                     </ul> -->
                   </li>
                   <li class="gnb_Friend's Pass">
                      <a href="#" title="Friend's Pass">Friend's Pass</a>
@@ -233,29 +51,75 @@
                   </p>
                </div>
                <div class="lang">
-                  <p class="img">
-                     <a href="#" title="언어">
+                  <a href="./index_kor.html" title="언어변경">
+                     <span class="img">
                         <img src="resource/img/index/header_language.svg" alt="언어설정">
-                     </a>
-                  </p>
-                  <p class="text">
-                     <a href="#" title="언어변경">ENG</a>
-                  </p>
+                     </span>
+                     <span class="text">
+                        <span>ENG</a>
+                  </span>
+                  </a>
                </div>
                <div class="menu_bar">
-                  <p></p>
-                  <p></p>
-                  <p></p>
+                  <span></span>
+                  <span></span>
+                  <span></span>
                </div>
             </div>
          </div>
       </header>
+      <div id="all_menu_box">
+         <div id="all_menu_inn">
+            <div class="all_menu_gnb">
+               <ul class="gnb_ul">
+                  <li class="title">
+                     <a href="#none" class="sTitle">Featured Games</a>
+                     <ul>
+                        <li><a href="./mass.html" title="Mass effect">Mass effect</a></li>
+                        <li><a href="./lost_in_Random.html" title="lost in Random">lost in Random</a></li>
+                        <li><a href="./nhl.html" title="NHL22">NHL22</a></li>
+                        <li><a href="./it_takes_two.html" title="It takes two">It takes two</a></li>
+                     </ul>
+                  </li>
+                  <li class="title">
+                     <a href="#none" class="sTitle">Games</a>
+                     <ul>
+                        <li><a href="#none" title=" Latest Game"> Latest Game</a></li>
+                        <li><a href="#none" title="Coming Soon">Coming Soon</a></li>
+                        <li><a href="#none" title="EA SPORTS">EA SPORTS</a></li>
+                        <li><a href="#none" title="free-To-Play">free-To-Play</a></li>
+                     </ul>
+                  </li>
+                  <li class="title">
+                     <a href="#none" class="sTitle">More Experiences</a>
+                     <ul>
+                        <li><a href="#none" title="EA Play">EA Play</a></li>
+                        <li><a href="#none" title="Origin">Origin</a></li>
+                        <li><a href="#none" title="Competitive Gaming">Competitive Gaming</a></li>
+                        <li><a href="#none" title="EA Play Live">EA Play Live</a></li>
+                     </ul>
+                  </li>
+                  <li class="title">
+                     <a href="#none" class="sTitle">About</a>
+                     <ul>
+                        <li><a href="#none" title="company">company</a></li>
+                        <li><a href="#none" title="EA Studio">EA Studio</a></li>
+                        <li><a href="#none" title="Our Technology">Our Technology</a></li>
+                        <li><a href="#none" title="EA Patners">EA Patners</a></li>
+                     </ul>
+                  </li>
+               </ul>
+
+            </div>
+
+         </div>
+      </div>
       <div id="container">
          <div id="cont_inn">
             <div id="visual">
                <p class="back">
-                  <video controls poster="resource/img/two/video.jpg" autoplay muted>
-                     <source src="resource/img/two/visual.mp4" type="video/mp4"/>
+                  <video controls poster="resource/img/two/video.jpg" autoplay muted loop>
+                     <source src="resource/video/two/visual.mp4" type="video/mp4" />
                   </video>
                </p>
                <p class="side">
@@ -275,7 +139,9 @@
                <div id="discover">
                   <div id="discover_inn">
                      <p class="desc">
-                        Only one thing's for certain in It Takes Two: we’re better together. With Friend’s Pass*, invite someone who you’d like to share this genre-bending, mind-blowing, co-op only platform adventure with – for free*!
+                        Only one thing's for certain in It Takes Two: we’re better together. With Friend’s Pass*, invite
+                        someone who you’d like to share this genre-bending, mind-blowing, co-op only platform adventure
+                        with – for free*!
                      </p>
                      <p class="box">
                         <a href="#" title="Discover More">
@@ -292,34 +158,76 @@
                         </p>
                         <div class="text">
                            <h2>Something out of the ordinary</h2>
-                           <p>Bring your favorite co-op partner and together step into the shoes of May and Cody. As the couple is going through a divorce, through unknown means their minds are transported into two dolls which their daughter, Rose, made to represent them. Now they must reluctantly find a way to get back into their bodies, a quest which takes them through the most wild, unexpected and fantastical journey imaginable.</p>
-                           <p>Released in 2021 to critical and fan acclaim, It Takes Two  further builds on Hazelight’s proven track record of making rich and engaging co-op experiences. While developing
-                              It Takes Two  it has been the team’s number one priority to truly merge story and gameplay. Allowing both to influence each other guarantees a game that is as engaging to play as it is compelling to experience.</p>
+                           <p>Bring your favorite co-op partner and together step into the shoes of May and Cody. As the
+                              couple is going through a divorce, through unknown means their minds are transported into
+                              two dolls which their daughter, Rose, made to represent them. Now they must reluctantly
+                              find a way to get back into their bodies, a quest which takes them through the most wild,
+                              unexpected and fantastical journey imaginable.</p>
+                           <p>Released in 2021 to critical and fan acclaim, It Takes Two further builds on Hazelight’s
+                              proven track record of making rich and engaging co-op experiences. While developing
+                              It Takes Two it has been the team’s number one priority to truly merge story and gameplay.
+                              Allowing both to influence each other guarantees a game that is as engaging to play as it
+                              is compelling to experience.</p>
                         </div>
                      </div>
                   </div>
                   <div class="scroll_AR">
                      <div class="scroll_inn">
-                        <ul>
-                           <li>
-                              <span class="img">
-                                 <img src="resource/img/two/scroll0.jpg" alt="it takes two desc"/>
-                              </span>
-                              <span class="text_AR">
-                                 <span class="text">
-                                    It Takes Two is a sound designer’s dream project. A world featuring everything you can imagine, where all elements come together in a playful and creative way.
-                                 </span><br/>
-                                 <span class="person">
-                                    Anne-Sophie Mongeau, Senior Sound Designer
-                                 </span>
-                              </span>
-                           </li>
-                        </ul>
+                        <p class="prevBtn" id="btn">
+                           <img src="resource/img/two/prevBtn.png" alt="이전버튼" />
+                        </p>
+                        <div class="scroll_ul_Area">
+                           <ul id="scroll_ul">
+                              <li>
+                                 <p class="img">
+                                    <img src="resource/img/two/scroll0.jpg" alt="it takes two desc" />
+                                 </p>
+                                 <div class="text_AR">
+                                    <p class="text">
+                                       It Takes Two is a sound designer’s dream project. A world featuring everything
+                                       you can imagine, where all elements come together in a playful and creative way.
+                                    </p><br />
+                                    <p class="person">
+                                       Anne-Sophie Mongeau, Senior Sound Designer
+                                    </p>
+                                 </div>
+                              </li>
+                              <li>
+                                 <p class="img">
+                                    <img src="resource/img/two/scroll1.jpg" alt="it takes two desc" />
+                                 </p>
+                                 <div class="text_AR">
+                                    <p class="text">
+                                       It Takes Two builds on the strengths of our previous games, combining fantastical
+                                       world building with crazy story driven co-op gameplay</p>
+                                    <p class="person">
+                                       Claes Engdal, Art Director
+                                    </p>
+                                 </div>
+                              </li>
+                              <li>
+                                 <p class="img">
+                                    <img src="resource/img/two/scroll2.jpg" alt="it takes two desc" />
+                                 </p>
+                                 <div class="text_AR">
+                                    <p class="text">
+                                       Working on It Takes Two has been a great opportunity to try out any crazy idea
+                                       I've wished to explore. A true joy for an environment artist.</p>
+                                    <p class="person">
+                                       Claes Engdal, Art Director
+                                    </p>
+                                 </div>
+                              </li>
+                           </ul>
+                        </div>
+                        <p class="nextBtn" id="btn">
+                           <img src="resource/img/two/nextBtn.png" alt="다음버튼" />
+                        </p>
                      </div>
                   </div>
-              </div>
-              <div id="collection">
-                 <div class="col_inn">
+               </div>
+               <div id="collection">
+                  <div class="col_inn">
                      <p class="col0"><img src="resource/img/two/col0.jpg" alt="collection0"></p>
                      <p class="col1"><img src="resource/img/two/col1.jpg" alt="collection1"></p>
                      <p class="col2"><img src="resource/img/two/col2.jpg" alt="collection2"></p>
@@ -327,86 +235,96 @@
                      <p class="col4"><img src="resource/img/two/col4.jpg" alt="collection4"></p>
                      <p class="col5"><img src="resource/img/two/col5.jpg" alt="collection5"></p>
                      <p class="col6"><img src="resource/img/two/col6.jpg" alt="collection6"></p>
-                 </div>
-              </div>
-              <div id="friend">
-                 <p class="img">
-                       <img src="resource/img/two/friend_back.jpg" alt="friend_pass"/>
-                 </p>
-                 <div class="text_AR">
-                       <h3>Friend's Pass </h3>
-                       <p class="desc">
-                       Invite a friend to join the adventure in It Takes Two for free.
-                    </p>
-                    <p class="box">
-                       <a href="#" title="Learn More">Learn More</a>
-                    </p>
-                 </div>
-              </div>
-              <div id="trailer">
-                 <div id="tra_inn">
-                    <h4>Watch the New 'We're Better Together' Trailer</h4>
-                    <p>
-                       <img src="resource/img/two/video.jpg" alt="동영상"/>
-                    </p>
-                 </div>
-              </div>
-              <div id="contact">
-                 <div class="contact_inn">
-                    <p class="text">Please to contact us should you have any queries.</p>
-                    <p class="box">
-                       <a href="#" title="contact">
-                          Contact Now
+                  </div>
+               </div>
+               <div id="friend">
+                  <p class="img">
+                     <img src="resource/img/two/friend_back.jpg" alt="friend_pass" />
+                  </p>
+                  <div class="text_AR">
+                     <h3>Friend's Pass </h3>
+                     <p class="desc">
+                        Invite a friend to join the adventure in It Takes Two for free.
+                     </p>
+                     <p class="box">
+                        <a href="#" title="Learn More">Learn More</a>
+                     </p>
+                  </div>
+               </div>
+               <div id="trailer">
+                  <div id="tra_inn">
+                     <h4>Watch the New 'We're Better Together' Trailer</h4>
+                     <p class="img">
+                        <img src="resource/img/two/video.jpg" alt="동영상" />
+                     </p>
+                     <p class="playBtn">
+                        <img src="resource/img/two/play.png" alt="재생">
+                     </p>
+                  </div>
+                  <div id="view"></div>
+                  <div id="full"></div>
+               </div>
+               <div id="contact">
+                  <div class="contact_inn">
+                     <p class="text">Are You Ready to Get Your Mind Blown?</p>
+                     <p class="box">
+                        <a href="#" title="contact">
+                           Buy Now !
                         </a>
                      </p>
-                 </div>
-              </div>
-              <div id="signUp">
-                 <div id="sign_inn">
-                    <div class="left">
-                       <h2>Stay up to date with Lost in Random™</h2>
-                       <p>Sign up today to receive the latest Lost in Random news, updates, behind-the-scenes content, exclusive offers, and more (including other EA news, products, events, and promotions) by email.</p>
-                    </div>
-                    <div class="right">
-                       <form action="#" method="post">
-                          <fieldset>
-                             <p class="email">
-                                <input type="email" id="usermail" name="useremail" placeholder="example@gmail.com"/>
-                             </p>
-                             <p class="birth">
-                                <input type="datetime" id="userbirth" name="userbirth" placeholder="1900-00-00"/>
-                             </p>
-                             <p class="select">
-                                <select>
-                                   <option value="United States">United States</option>
-                                   <option value="Argentina">Argentina</option>
-                                   <option value="Australia">Australia</option>
-                                   <option value="Austria">Austria</option>
-                                   <option value="Belgium">Belgium</option>
-                                   <option value="Brazil">Brazil</option>
-                                   <option value="Canada">Canada</option>
-                                   <option value="Chile">Chile</option>
-                                   <option value="China">China</option>
-                                   <option value="Colombia">Colombia</option>
-                                   <option value="Czech Republic">Czech Republic</option>
-                                   <option value="Denmark">Denmark</option>
-                                   <option value="Finland">Finland</option>
-                                </select>
-                             </p>
-                          </fieldset>
-                       </form>
-                       <div class="check_AR">
-                          <p class="checkbox">
-                             <input type="checkbox" id="checkbox" name="checkbox"/>
-                             <label for="checkbox">I can unsubscribe at any time by changing my <b>email preferences</b>, contacting <b>privacyadmin.ea.com</b>, or writing to Electronic Arts Inc., ATTN: Email Opt-Out, 209 Redwood Shores Pkwy, Redwood City, CA, 94065, USA.</label>
-                          </p>
-                       </div>
-                       <p class="box">
-                          <a href="#" title="signUp">sign Up</a>
-                       </p>
-                    </div>
-                 </div>
-              </div>
+                  </div>
+               </div>
+               <div id="signUp">
+                  <div id="sign_inn">
+                     <div class="left">
+                        <h2>Stay up to date with Lost in Random™</h2>
+                        <p>Sign up today to receive the latest Lost in Random news, updates, behind-the-scenes content,
+                           exclusive offers, and more (including other EA news, products, events, and promotions) by
+                           email.</p>
+                     </div>
+                     <div class="right">
+                        <form action="#" method="post">
+                           <fieldset>
+                              <p class="email">
+                                 <input type="email" id="usermail" name="useremail" placeholder="example@gmail.com" />
+                              </p>
+                              <p class="birth">
+                                 <input type="datetime" id="userbirth" name="userbirth" placeholder="1900-00-00" />
+                              </p>
+                              <p class="select">
+                                 <select>
+                                    <option value="United States">United States</option>
+                                    <option value="Argentina">Argentina</option>
+                                    <option value="Australia">Australia</option>
+                                    <option value="Austria">Austria</option>
+                                    <option value="Belgium">Belgium</option>
+                                    <option value="Brazil">Brazil</option>
+                                    <option value="Canada">Canada</option>
+                                    <option value="Chile">Chile</option>
+                                    <option value="China">China</option>
+                                    <option value="Colombia">Colombia</option>
+                                    <option value="Czech Republic">Czech Republic</option>
+                                    <option value="Denmark">Denmark</option>
+                                    <option value="Finland">Finland</option>
+                                 </select>
+                              </p>
+                           </fieldset>
+                        </form>
+                        <div class="check_AR">
+                           <p class="checkbox">
+                              <input type="checkbox" id="checkbox" name="checkbox" />
+                              <label for="checkbox">I can unsubscribe at any time by changing my <b>email
+                                    preferences</b>, contacting <b>privacyadmin.ea.com</b>, or writing to Electronic
+                                 Arts Inc., ATTN: Email Opt-Out, 209 Redwood Shores Pkwy, Redwood City, CA, 94065,
+                                 USA.</label>
+                           </p>
+                        </div>
+                        <p class="box">
+                           <a href="#" title="signUp">sign Up</a>
+                        </p>
+                     </div>
+                  </div>
+               </div>
             </div>
          </div>
       </div>
@@ -433,7 +351,8 @@
                   <ul>
                      <li><a href="#" title="Legal">Legal</a></li>
                      <li><a href="#" title="User Agreement">User Agreement</a></li>
-                     <li><a href="#" title="Privacy &amp; Cookie Policy (Your Privacy Rights">Privacy &amp; Cookie Policy (Your Privacy Rights)</a></li>
+                     <li><a href="#" title="Privacy &amp; Cookie Policy (Your Privacy Rights">Privacy &amp; Cookie
+                           Policy (Your Privacy Rights)</a></li>
                      <li><a href="#" title="Online Service Updates">Online Service Updates</a></li>
                      <li><a href="#" title="Security">Security</a></li>
                      <li><a href="#" title="YouTube Terms of Service">YouTube Terms of Service</a></li>
@@ -442,7 +361,7 @@
                      <a href="#" title="Google Privacy Policy">Google Privacy Policy</a>
                   </p>
                   <p class="copy">
-                     <a href="#" title="© 2022 Electronic Arts Inc.">&copy; 2022 Electronic Arts Inc.</a>
+                     <a href="#" title="© 2022 Electronic Arts Inc.">&copy; Lee Mina</a>
                   </p>
                </div>
                <div class="siteArea">
@@ -461,27 +380,27 @@
                      <ul>
                         <li>
                            <a href="#" title="페이스북">
-                              <img src="resource/img/index/sns_fb.svg" alt="페이스북"/>
+                              <img src="resource/img/index/sns_fb.svg" alt="페이스북" />
                            </a>
                         </li>
                         <li>
                            <a href="#" title="링크드인">
-                              <img src="resource/img/index/sns_in.svg" alt="링크드인"/>
+                              <img src="resource/img/index/sns_in.svg" alt="링크드인" />
                            </a>
                         </li>
                         <li>
                            <a href="#" title="인스타">
-                              <img src="resource/img/index/sns_ins.svg" alt="인스타"/>
+                              <img src="resource/img/index/sns_ins.svg" alt="인스타" />
                            </a>
                         </li>
                         <li>
                            <a href="#" title="유튜브">
-                              <img src="resource/img/index/sns_yt.svg" alt="유튜브"/>
+                              <img src="resource/img/index/sns_yt.svg" alt="유튜브" />
                            </a>
                         </li>
                         <li>
                            <a href="#" title="트위터">
-                              <img src="resource/img/index/sns_tw.svg" alt="트위터"/>
+                              <img src="resource/img/index/sns_tw.svg" alt="트위터" />
                            </a>
                         </li>
                      </ul>
@@ -502,5 +421,5 @@
       </footer>
    </div>
 </body>
-</html>
 
+</html>
