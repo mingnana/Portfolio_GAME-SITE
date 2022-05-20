@@ -8,7 +8,7 @@
 * 2022.02.05 ~
 
 ⚙ 사용언어
-* HTML,CSS,Javascrip 
+* HTML,CSS,JQuery, Javascrip 
 
 🛠 구현 기능
 
