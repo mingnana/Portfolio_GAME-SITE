@@ -1,0 +1,185 @@
+*{margin:0; padding:0;}
+li{list-style-type:none;}
+a:link, a:visited{text-decoration:none; color:#fff;}
+
+#wrap{min-width:1025px; width:100%; background-color:#000; color:#fff;  font-family:  'Acme', sans-serif;}
+#container{width:100%;}
+
+/* 타이틀제목, 내용 공통작업 */
+h3{font-size:38px;}
+.desc{font-size:24px; padding:20px 0;}
+
+/* 박스 공통작업 */
+.box{width:158px; line-height:54px; border-radius:3px; text-align:center; border:1px solid #fff;}
+.box a{width:100%; display:block;}
+.box:hover{transform:scale(1.1,1.1);}
+
+/* #################################  header / buy 버튼  ################################# */
+#header_btn .buy{border:2px solid #c80000;}
+#header_btn .buy a{color:#c80000;}
+/* 메뉴 기능 */
+#gnb li a:after{border-bottom:3px solid #c80000;}
+/* buy기능 */
+#header_btn .buy:hover, #header_btn .buy a:focus{width:134px; height:44px; line-height:44px;
+    border:none; background-color:#c80000;}
+#header_btn .buy a:hover, #header_btn .buy a:focus{ color:#fff;}    
+
+
+/* #################################  visual  ################################# */
+#visual{width:100%; overflow:hidden; height:1070px; }
+#visual .back{width:100%;}
+#visual .back img{width:100%;}
+#visual:after{content:""; display:block; clear:both;}
+
+/* #############  visual / vis_inn  ############# */
+#vis_inn{width:450px; text-align:center; position:absolute; left:10%; top:40%;}
+#vis_inn .desc{padding-bottom: 25px; font-size:22px; color:#fff;}
+
+/* 박스 */
+#vis_inn .box_AR{width:100%; height:56px;}
+#vis_inn .box_AR p{font-size:20px; border-radius:3px; float:left;}
+#vis_inn .left{width:160px; line-height:56px; margin-left:10px; background-color:#c80000; }
+#vis_inn .right{width:248px; height:53px ;line-height:53px; border:1px solid #fff; margin-left:20px;}
+#vis_inn a{width:100%; display:block;}
+
+#vis_inn .left:hover, #vis_inn .right:hover{transform:scale(1.1,1.1);}
+#vis_inn:after{content:""; display:block; clear:both;}
+
+
+/* #################################  feature  ################################# */
+#feature{width:100%;
+    background-image:url("resource/img/mass/fea_back.jpg");
+    background-repeat:no-repeat;
+    background-size:100%;}
+
+#feature{content:""; display:block; clear:both;}
+/* #############  feature / text_inn ############# */
+#feature .text_AR{width:100%;}
+#feature .text_inn{width:1025px; height:212px; padding:120px 0 80px; color:#fff; text-align:center; margin:0 auto;}
+#feature .box{margin:0 auto;}
+
+/* #############  feature / img_inn  ############# */
+#feature .img_AR{width:100%; height:700px;}
+/* 이미지 */
+#feature .img_inn{width:1680px; height:100%; margin:0 auto;}
+#feature .img_inn dl{width:540px; padding:0 10px; float:left;}
+#feature .img_inn dt{width:100%; height:303px; overflow:hidden;}
+#feature .img_inn img{width:100%; transform: scale(1); transition:transform 0.5s linear;}
+
+/* 이미지 기능 */
+#feature .img_inn dt:hover img{transform: scale(1.1);}
+/* 글 */
+#feature .img_inn dd{width:460px; height:156px; padding:0 40px; 
+    text-align:center; color:#fff; }
+#feature .img_inn h3{font-size:24px; padding:20px 0;}
+#feature .img_inn p{line-height:23px;}
+
+
+/* #################################  comparison  ################################# */
+#comparison{width:100%; height:1250px;}
+#comparison:after{content:""; display:block; clear:both;}
+/* #############  comparison / text_inn  ############# */
+#comparison .text_AR{width:100%;}
+#comparison .text_inn{width:950px; margin:0 auto; text-align:center;}
+/* #############  comparison / img_inn  ############# */
+#comparison .img_AR{width:100%;}
+#comparison .img_inn{width:1700px; margin:0 auto;}
+/* 메뉴 */
+#comparison .menu{width:100%; height:50px; text-align:center; background:#fff;}
+#comparison ul{width:100%; padding-left: 250px; }
+#comparison li{width:100px; line-height:50px;
+    border-right:1px solid #ccc; float:left;}
+#comparison li a{width:100%; display:block; color:#555;}
+/* 기본 */
+#comparison .select{background-color:#c80000;}
+#comparison .select a{color:#fff;}
+
+/* 동영상 */
+#comparison .media{width:100%;}
+#comparison img{width:100%;}
+
+/* #################################  start  ################################# */
+#start{width:100%; position:relative;}
+#start .img{width:100%; height:500px; overflow:hidden;}
+#start img{width:100%; }
+/* 텍스트 */
+#start .text_AR{width:600px; position:absolute; right:10%; top:30%;}
+#start .desc{font-size:20px;}
+
+/* #################################  effect  ################################# */
+#effect{width:100%; padding:50px 0; position:relative;}
+#effect .img{width:100%;}
+#effect img{width:100%;}
+/* 텍스트 & 박스*/
+#effect .text_AR{width:600px; position:absolute; left:5%; top:35%;}
+#effect .box{width:228px;}
+
+/* #################################  find  ################################# */
+#find{width:100%; padding:50px 0;}
+#find_inn{width:1700px; margin:0 auto;}
+#find_inn div{width:840px; float:left;}
+#find_left{margin-right:20px;}
+#find .img{width:100%;}
+#find img{width:100%;}
+
+#find:after{content:""; display:block; clear:both;}
+/* 텍스트 */
+#find_inn .text_AR{width:100%; padding-top:30px; text-align:center;}
+#find_inn .box{margin:0 auto;}
+
+/* #################################  shop  ################################# */
+#shop{width:100%; padding:50px 0; position:relative;}
+#shop .img{width:100%;}
+#shop img{width:100%;}
+#shop .text_AR{width:600px; position:absolute; right:8%; top:35%;}
+
+/* #################################  exp  ################################# */
+#exp{width:100%; padding:50px 0 80px; text-align:center;}
+#exp_inn{width:1025px; margin:0 auto;}
+#exp_inn ul{width:100%; padding-top:50px;}
+#exp_inn li{padding:0 20px; margin-left:20px; line-height:51px; 
+    background-color:#c80000; border-radius: 3px; display:inline-block; }
+    
+/* #################################  buy  ################################# */
+#buy{width:100%; overflow:hidden; position:relative;}
+#buy .img{width:100%; height:280px; overflow:hidden;}
+#buy img{width:100%;}
+
+#buy .text_AR{width:1025px; position:absolute; left:23%; top:30%;}
+#buy h3{padding-bottom: 30px; text-align:center;}
+#buy .box{margin:0 auto;}
+
+/* #################################  sign Up  ################################# */
+#signUp{width:100%;}
+#sign_inn{width:1060px; padding:80px 0; margin:0 auto; color:#fff; }
+#sign_inn:after{content:""; display:block; clear:both;}
+/* 왼쪽영역 */
+#sign_inn .left{width:520px; float:left;}
+#sign_inn .left h2{width:100%; padding-bottom:30px; font-size:35px;}
+#sign_inn .left p{font-size:15px;}
+/* 오른쪽 영역 */
+#sign_inn .right{width:490px; height:260px; margin-left:50px; float:left;}
+#sign_inn fieldset{border:none;}
+#sign_inn .right input, select{color:#aaa; background-color:transparent;
+    text-indent:20px; padding:10px 0;
+    border-radius:3px; border:1px solid #fff;}
+
+#sign_inn .email{width:487px; height:38px; margin-bottom:20px;}
+#sign_inn .email input{width:100%;}
+#sign_inn .birth{width:229px; height:38px; float:left; }
+#sign_inn .birth input{width:100%; height:18px; float:left; }
+
+#sign_inn .select{width:229px; height:38px;  margin-left:30px; float:left;}
+#sign_inn select{width:100%; }
+
+/* 체크박스 */
+#sign_inn .check_AR{width:100%; margin:30px 0; overflow:hidden;}
+#sign_inn .check{width:18px; height:18px; float:left;}
+#sign_inn .right .desc{width:472px; margin-left:18px; height:80px; line-height:20px;
+    font-size:13px; display:block; color:#fff; padding:0;}
+#sign_inn b{color:#c80000;}
+/* 사인 박스 */
+#sign_inn .box{width:136px; height:50px; line-height:50px; text-align:center; 
+    background-color:#c80000; border:none; border-radius:3px;}
+#sign_inn .box a{display:block; color:#f3f3f3;}
+#sign_inn .box:hover{padding:3px;}

@@ -5,7 +5,7 @@ $(document).ready(function(){
    hideVideo();
    showVideo();
    $("#upNews").siblings('.updateCate').hide();
-
+      
  })
 
  // 채팅기능
@@ -40,6 +40,21 @@ $(document).ready(function(){
       body.toggleClass("active");
    })
 }
+
+   // visual txt
+   const content = "Electronic Arts is \n the ultimate destination for \n everything";
+   const text = document.querySelector("#typing .text");
+   let i = 0;
+   function typing(){
+       let txt = content[i++];
+       text.innerHTML += txt=== "\n" ? "<br/>": txt;
+       if (i > content.length) {
+           text.textContent = "";
+           i = 0;
+       }
+   }
+   setInterval(typing, 150)
+
  // featured Games morebox
  var more = true;
  function moreGame(){

@@ -1,0 +1,170 @@
+*{margin:0; padding:0;}
+li{list-style-type:none;}
+a:link, a:visited{text-decoration:none; color:#000;}
+body{font-family:궁서;}
+
+#wrap{min-width:1025px; width:100%; font-family: 'Acme', sans-serif;}
+#container{width:100%;}
+#cont_inn{width:100%;}
+
+/* 박스 공통작업 */
+.box{width:170px; height:50px; line-height:50px;  
+   margin:0 auto; border-radius:3px; font-size:16px;}
+.box:hover{transform:scale(1.1,1.1);}
+
+
+/* #################################  header / buy 버튼  ################################# */
+#header_btn .buy{border:2px solid #4c4989;}
+#header_btn .buy a{color:#4c4989;}
+/* 메뉴 기능 */
+#gnb li a:after{border-bottom:3px solid #4c4989;}
+/* buy기능 */
+#header_btn .buy:hover, #header_btn .buy a:focus{width:134px; height:44px; line-height:44px;
+   border:none; background-color:#4c4989; color:#fff;}
+#header_btn .buy:hover a, #header_btn .buy:focus{color:#fff;}   
+
+
+
+/* #################################  visual  ################################# */
+#visual{width:100%; height:1080px;}
+#visual .back{width:100%; }
+#visual .side{width:100%; position:absolute; left:0; top:0;
+   animation: side 5s infinite alternate;}
+#visual .side img{width:100%}
+#visual:after{content:""; display:block; clear:both;}
+/* side 기능 */
+@keyframes side{
+   0%{top:4%}
+   20%{top:5%}
+   40%{top:4%}
+   60%{top:5%}
+   100%{top:4%}
+   
+}
+/* 텍스트내용 */
+#vis_inn{width:700px; height:195px;  overflow:hidden; text-align:center;
+   position:absolute; left:30%; top:70%;}
+#visual h2{width:700px; padding:30px 0;
+   color:#f3f3f3; font-size:30px; font-weight:400; text-align:center;} 
+/* 박스 공통작업 */
+#vis_inn p{width:198px; line-height:56px;
+   border-radius:3% 3%; text-align:center; float:left;}
+#vis_inn p:hover{transform:scale(1.05,1.05);}
+/* 왼쪽박스 */
+#visual .left{background-color:#4c4989; position:absolute; left:20%;}
+#visual .left a{color:#f3f3f3;}
+/* 오른쪽박스 */
+#visual .right{background-color:#f1f1f1; position:absolute; left:50%;}
+#visual .right a{color:#161616;}
+
+/* #################################  contents  ################################# */
+#contents{width:100%; 
+background-image:url("../resource/img/lost/cont_back.jpg");
+background-size:100% 100%;
+background-repeat:no-repeat;
+background-attachment: fixed;
+text-align:center;}
+/* #contents:after{content:""; display:block; clear:both;} 왜 안되는건지? */
+/* 타이틀 공통작업 */
+h4{font-size:40px; padding:25px 0; color:#fff;}
+
+/* #############  contents / world of Random  ############# */
+#world{width:100%;}
+#world_inn{width:860px; height:357px; padding:100px; margin:0 auto;
+   color:#fff; }
+#world_inn h2{font-size:24px;}
+#world_inn h3{font-size:40px; padding-top:10px;}
+#world_inn .line{width:430px; padding-top:30px; margin:0 auto;}
+#world_inn .line img{width:100%;}
+#world_inn .desc{padding:30px 0; line-height:25px;}
+
+/* 더읽기 */
+#world_inn .box a{display:block; color:#f3f3f3; border:1px solid #fff;  border-radius:3px;}
+/* #world:after{content:""; display:block; clear:both;} */
+
+/* #############  contents / watch the trailer  ############# */
+#trailer{width:100%; position: relative;}
+#tra_inn{width:1060px; margin:0 auto;}
+#tra_inn p{width:100%;}
+#tra_inn .playBtn{width:200px; position:absolute; left:50%; top:50%;
+   transform:translate(-50%, -35%); cursor:pointer;}
+#tra_inn img{width:100%;}
+#full{width:100%; height:100%; background-color:rgba(0,0,0,0.5); position:fixed;
+left:0; top:0;}
+
+#view{width:1300px; height:729px;
+   position:absolute; left:50%; top:50%; transform:translate(-50%, -35%); z-index:1;
+}
+
+/* #############  contents / Latest News  ############# */
+#news{width:100%}
+#news_inn{width:1060px; height:530px; margin:0 auto;}
+#box_AR{width:100%; height:330px;}
+#box_AR div{width: 330px; height:297px; padding:10px 10px 0; float:left; transition:all 0.4s;}
+#box_AR div a{width:100%; display:block;}
+/* 박스 사진 */
+#box_AR a .img{width:100%; height:158px; overflow:hidden; display:block;}
+#box_AR a img{width:100%;}
+#box_AR div:hover{transform:translatey(-15px);} /*(임시)*/
+/* 박스 글 (홈페이지 글씨크기 참고하기)*/
+#box_AR a .text{width:270px; height:91px; padding:24px 30px;
+    background-color:#fff; text-align:left; display:block;}
+#box_AR a .game_title{width:130px; color:#4d4a8a; font-size:13px;
+    float:left; display:block;}
+#box_AR a .date{width:110px; color:#161616; font-size:13px;
+   display:block; float:left;}
+#box_AR a strong{width:100%; padding-top:10px;
+    font-size:20px; clear:both; display:block;}
+
+/* #############  contents / more news  ############# */
+#news_inn .box{background-color:#fff;}
+#news_inn .box a{display:block; font-size:14px;}
+#news_inn .box:hover{padding:5px;}
+
+/* #############  contents / Soon  ############# */
+#soon{width:100%}
+#soon_inn{width:1060px; margin:0 auto;}
+#soon_inn .line{padding:30px;}
+#soon_inn .cards{width:100%; overflow:hidden;}
+#soon_inn .cards p{width:247px; height:372px; margin:0 8px; float:left;}
+#soon_inn .cards a{width:100%; height:100%; display:block;}
+#soon_inn .cards img{width:100%; height:100%;}
+
+/* #################################  sign Up  ################################# */
+#signUp{width:100%;
+   background-image:url("../resource/img/lost/sign.jpg");
+   background-size:100%;
+   background-repeat:no-repeat;}
+#sign_inn{width:1060px; padding:80px 0; margin:0 auto; color:#fff; }
+#sign_inn:after{content:""; display:block; clear:both;}
+/* 왼쪽영역 */
+#sign_inn .left{width:520px; float:left;}
+#sign_inn .left h2{width:100%; padding-bottom:30px; font-size:35px;}
+#sign_inn .left p{font-size:15px;}
+/* 오른쪽 영역 */
+#sign_inn .right{width:490px; height:260px; margin-left:50px; float:left;}
+#sign_inn fieldset{border:none;}
+#sign_inn .right input, select{color:#aaa; background-color:transparent;
+   text-indent:20px; padding:10px 0;
+   border-radius:3px; border:1px solid #fff;}
+
+#sign_inn .email{width:487px; height:38px; margin-bottom:20px;}
+#sign_inn .email input{width:100%;}
+
+#sign_inn .birth{width:229px; height:38px; float:left; }
+#sign_inn .birth input{width:100%; height:18px; float:left; }
+
+#sign_inn .select{width:229px; height:38px;  margin-left:30px; float:left;}
+#sign_inn select{width:100%; }
+
+/* 체크박스 */
+#sign_inn .check_AR{width:100%; margin:30px 0; overflow:hidden;}
+#sign_inn .check{width:18px; height:18px; float:left;}
+#sign_inn .right .desc{width:472px; margin-left:18px; height:80px; line-height:20px;
+    font-size:13px; display:block; color:#fff;}
+#sign_inn b{color:#4c4989;}
+/* 사인 박스 */
+#sign_inn .box{width:136px; height:50px; line-height:50px; text-align:center; 
+   background-color:#4c4989; border-radius:3px; margin:0;}
+#sign_inn .box a{display:block; color:#f3f3f3;}
+#sign_inn .box:hover{padding:3px;}
