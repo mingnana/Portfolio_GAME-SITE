@@ -83,7 +83,10 @@ h3{font-size:38px;}
 #comparison .text_inn{width:950px; margin:0 auto; text-align:center;}
 /* #############  comparison / img_inn  ############# */
 #comparison .img_AR{width:100%;}
-#comparison .img_inn{width:1700px; margin:0 auto;}
+#comparison .img_inn{width:1500px; margin:0 auto;}
+#comparison .img_inn .media{width:100%;}
+#comparison .img_inn video{width:100%;}
+
 /* 메뉴 */
 #comparison .menu{width:100%; height:50px; text-align:center; background:#fff;}
 #comparison ul{width:100%; padding-left: 250px; }
