@@ -5,7 +5,7 @@ $(document).ready(function(){
    hideVideo();
    showVideo();
    $("#upNews").siblings('.updateCate').hide();
-      
+   update();
  })
 
  // 채팅기능
@@ -42,19 +42,25 @@ $(document).ready(function(){
 }
 
    // visual txt
-   const content = "Electronic Arts is \n the ultimate destination for \n everything";
-   const text = document.querySelector("#typing .text");
-   let i = 0;
-   function typing(){
-       let txt = content[i++];
-       text.innerHTML += txt=== "\n" ? "<br/>": txt;
-       if (i > content.length) {
-           text.textContent = "";
-           i = 0;
-       }
-   }
-   setInterval(typing, 150)
-
+   var typingBool = false; 
+   var i=0; 
+   var typingTxt = $(".typing_txt").text(); // 타이핑될 텍스트를 가져온다 
+   typingTxt=typingTxt.split(""); // 한글자씩 자른다. 
+   if(typingBool==false){ // 타이핑이 진행되지 않았다면 
+      typingBool=true; 
+      
+      var tyInt = setInterval(typing,100); // 반복동작 
+    } 
+    
+    function typing(){ 
+      if(i<typingTxt.length){ // 타이핑될 텍스트 길이만큼 반복 
+        $(".typing").append(typingTxt[i]); // 한글자씩 이어준다. 
+        i++; 
+      } else{ 
+        clearInterval(typing); //끝나면 반복종료 
+      } 
+    }
+   
  // featured Games morebox
  var more = true;
  function moreGame(){
@@ -99,75 +105,78 @@ $(document).ready(function(){
 
 
  // update 메뉴
- function clickNews(){
-    Newsa =  $(".menu li:eq(0)")
-    upNews = $("#upNews")
-    Newsa.children('a').css({"backgroundImage":"-webkit-linear-gradient(transparent 60%, rgba(0,255,180,0.6) 5px)"})
-    Newsa.siblings().children('a').css({"backgroundImage":"none"})
-    upNews.show()
-    upNews.siblings('.updateCate').hide()
- }
- function clickPlay(){
-    Playa = $(".menu li:eq(1)")
-    upPlay = $("#upPlay")
-    Playa.children('a').css({"backgroundImage":"-webkit-linear-gradient(transparent 60%, rgba(0,255,180,0.6) 5px)"})
-    Playa.siblings().children('a').css({"backgroundImage":"none"})
-    upPlay.show()
-    upPlay.siblings('.updateCate').hide()
- }
- function clickNFL(){
-    NFL = $(".menu li:eq(2)")
-    upNFL = $("#upNFL")
-    NFL.children('a').css({"backgroundImage":"-webkit-linear-gradient(transparent 60%, rgba(0,255,180,0.6) 5px)"})
-    NFL.siblings().children('a').css({"backgroundImage":"none"})
-    upNFL.show()
-    upNFL.siblings('.updateCate').hide()
- }
- function clickApex(){
-    Apex = $(".menu li:eq(3)")
-    upApex = $("#upApex")
-    Apex.children('a').css({"backgroundImage":"-webkit-linear-gradient(transparent 60%, rgba(0,255,180,0.6) 5px)"})
-    Apex.siblings().children('a').css({"backgroundImage":"none"})
-    upApex.show()
-    upApex.siblings('.updateCate').hide()
- }
- function clickFIFA(){
-    FIFA = $(".menu li:eq(4)")
-    upFIFA = $("#upFIFA")
-    FIFA.children('a').css({"backgroundImage":"-webkit-linear-gradient(transparent 60%, rgba(0,255,180,0.6) 5px)"})
-    FIFA.siblings().children('a').css({"backgroundImage":"none"})
-    upFIFA.show()
-    upFIFA.siblings('.updateCate').hide()
- }
- function clickBat(){
-    Bat = $(".menu li:eq(5)")
-    upBat = $("#upBat")
-    Bat.children('a').css({"backgroundImage":"-webkit-linear-gradient(transparent 60%, rgba(0,255,180,0.6) 5px)"})
-    Bat.siblings().children('a').css({"backgroundImage":"none"})
-    upBat.show()
-    upBat.siblings('.updateCate').hide()
- }
- function clickSims(){
-    Sims = $(".menu li:eq(6)")
-    upSims = $("#upSims")
-    Sims.children('a').css({"backgroundImage":"-webkit-linear-gradient(transparent 60%, rgba(0,255,180,0.6) 5px)"})
-    Sims.siblings().children('a').css({"backgroundImage":"none"})
-    upSims.show()
-    upSims.siblings('.updateCate').hide()
- }
- function clickF1(){
-    F1 = $(".menu li:eq(7)")
-    upF1 = $("#upF1")
-    F1.children('a').css({"backgroundImage":"-webkit-linear-gradient(transparent 60%, rgba(0,255,180,0.6) 5px)"})
-    F1.siblings().children('a').css({"backgroundImage":"none"})
-    upF1.show()
-    upF1.siblings('.updateCate').hide()
- }
- function clickIn(){
-    In = $(".menu li:eq(8)")
-    upIn = $("#upIn")
-    In.children('a').css({"backgroundImage":"-webkit-linear-gradient(transparent 60%, rgba(0,255,180,0.6) 5px)"})
-    In.siblings().children('a').css({"backgroundImage":"none"})
-    upIn.show()
-    upIn.siblings('.updateCate').hide()
- }
+ function update(){
+    $(".upNews a").on("click focus", function(){
+       Newsa =  $(".menu li:eq(0)")
+       upNews = $("#upNews")
+       Newsa.children('a').css({"backgroundImage":"-webkit-linear-gradient(transparent 60%, rgba(0,255,180,0.6) 5px)"})
+       Newsa.siblings().children('a').css({"backgroundImage":"none"})
+       upNews.show()
+       upNews.siblings('.updateCate').hide()
+    })
+
+    $(".upPlay a").on("click focus", function(){
+      Playa = $(".menu li:eq(1)")
+      upPlay = $("#upPlay")
+      Playa.children('a').css({"backgroundImage":"-webkit-linear-gradient(transparent 60%, rgba(0,255,180,0.6) 5px)"})
+      Playa.siblings().children('a').css({"backgroundImage":"none"})
+      upPlay.show()
+      upPlay.siblings('.updateCate').hide()
+   })
+   $(".upNFL a").on("click focus", function(){
+      NFL = $(".menu li:eq(2)")
+      upNFL = $("#upNFL")
+      NFL.children('a').css({"backgroundImage":"-webkit-linear-gradient(transparent 60%, rgba(0,255,180,0.6) 5px)"})
+      NFL.siblings().children('a').css({"backgroundImage":"none"})
+      upNFL.show()
+      upNFL.siblings('.updateCate').hide()
+   })
+   $(".upApex a").on("click focus", function(){
+      Apex = $(".menu li:eq(3)")
+      upApex = $("#upApex")
+      Apex.children('a').css({"backgroundImage":"-webkit-linear-gradient(transparent 60%, rgba(0,255,180,0.6) 5px)"})
+      Apex.siblings().children('a').css({"backgroundImage":"none"})
+      upApex.show()
+      upApex.siblings('.updateCate').hide()
+   })
+   $(".upFifa a").on("click focus", function(){
+      FIFA = $(".menu li:eq(4)")
+      upFIFA = $("#upFIFA")
+      FIFA.children('a').css({"backgroundImage":"-webkit-linear-gradient(transparent 60%, rgba(0,255,180,0.6) 5px)"})
+      FIFA.siblings().children('a').css({"backgroundImage":"none"})
+      upFIFA.show()
+      upFIFA.siblings('.updateCate').hide()
+   })
+   $(".upBat a").on("click focus", function(){
+      Bat = $(".menu li:eq(5)")
+      upBat = $("#upBat")
+      Bat.children('a').css({"backgroundImage":"-webkit-linear-gradient(transparent 60%, rgba(0,255,180,0.6) 5px)"})
+      Bat.siblings().children('a').css({"backgroundImage":"none"})
+      upBat.show()
+      upBat.siblings('.updateCate').hide()
+   })
+   $(".upSims a").on("click focus", function(){
+      Sims = $(".menu li:eq(6)")
+      upSims = $("#upSims")
+      Sims.children('a').css({"backgroundImage":"-webkit-linear-gradient(transparent 60%, rgba(0,255,180,0.6) 5px)"})
+      Sims.siblings().children('a').css({"backgroundImage":"none"})
+      upSims.show()
+      upSims.siblings('.updateCate').hide()
+   })
+   $(".upF1 a").on("click focus", function(){
+      F1 = $(".menu li:eq(7)")
+      upF1 = $("#upF1")
+      F1.children('a').css({"backgroundImage":"-webkit-linear-gradient(transparent 60%, rgba(0,255,180,0.6) 5px)"})
+      F1.siblings().children('a').css({"backgroundImage":"none"})
+      upF1.show()
+      upF1.siblings('.updateCate').hide()
+   })
+   $(".upIn a").on("click focus", function(){
+      In = $(".menu li:eq(8)")
+      upIn = $("#upIn")
+      In.children('a').css({"backgroundImage":"-webkit-linear-gradient(transparent 60%, rgba(0,255,180,0.6) 5px)"})
+      In.siblings().children('a').css({"backgroundImage":"none"})
+      upIn.show()
+      upIn.siblings('.updateCate').hide()
+ })
+}
