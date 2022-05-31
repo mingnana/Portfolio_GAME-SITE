@@ -33,8 +33,7 @@
 <img src="https://user-images.githubusercontent.com/96216178/171073604-a13f2bc1-62fa-43e6-9604-53c22d2a55a7.JPG" >
 
 ```md
-크게 나뉘어진 두개의 section의 ui가 매우 유사한 형태를 띄어 
-구조상 다채롭지 못함
+크게 나뉘어진 두개의 section의 ui가 매우 유사한 형태를 띄어 구조상 다채롭지 못함
 ```
 
 #### 4. 프로젝트 설명
