@@ -23,7 +23,7 @@
 
 #### 4. 프로젝트 url
 
-1) [mainPage]([https://mingnana.github.io/Portfolio_box-office/mainPage.html](https://mingnana.github.io/Portfolio_GAME-SITE/index.html))
+1) [mainPage](https://mingnana.github.io/Portfolio_GAME-SITE/index.html)
 2) [subPage1](https://mingnana.github.io/Portfolio_GAME-SITE/mass.html)
 3) [subPage2](https://mingnana.github.io/Portfolio_GAME-SITE/lost_in_Random.html)
 4) [subPage3](https://mingnana.github.io/Portfolio_GAME-SITE/nhl.html)
