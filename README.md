@@ -21,7 +21,16 @@
   - Visual Studio Code
 ```
 
-#### 4. Electronic Arts 사이트 분석
+#### 4. 프로젝트 url
+
+1) [mainPage]([https://mingnana.github.io/Portfolio_box-office/mainPage.html](https://mingnana.github.io/Portfolio_GAME-SITE/index.html))
+2) [subPage1](https://mingnana.github.io/Portfolio_GAME-SITE/mass.html)
+3) [subPage2](https://mingnana.github.io/Portfolio_GAME-SITE/lost_in_Random.html)
+4) [subPage3](https://mingnana.github.io/Portfolio_GAME-SITE/nhl.html)
+5) [subPage4](https://mingnana.github.io/Portfolio_GAME-SITE/it_takes_two.html)
+
+
+#### 5. Electronic Arts 사이트 분석
 <img src="https://user-images.githubusercontent.com/96216178/171073385-d04aaed5-2c71-4eab-890a-5d9492c8cbda.JPG" width="800" >
 
 ```md
@@ -36,7 +45,7 @@
 크게 나뉘어진 두개의 section의 ui가 매우 유사한 형태를 띄어 구조상 다채롭지 못함
 ```
 
-#### 4. 프로젝트 설명
+#### 6. 프로젝트 설명
 ```md
 * HomePage
   처음 접속하면 나오는 메인페이지로 html과 css만으로 드롭메뉴 구현
@@ -74,7 +83,7 @@
 
 --------
 
-#### 5. 프로젝트 Review
+#### 7. 프로젝트 Review
 
 ```md
  1) 프론트엔드 지식이 전무한 상태에서 html5를 통한 마크업구축과 css를 이용해 정적인 뷰페이지를 구현하고
